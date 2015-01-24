@@ -7,3 +7,5 @@
 meteor-platform
 orionjs:core
 orionjs:styles
+orionjs:summernote@0.2.4
+summernote:summernote
