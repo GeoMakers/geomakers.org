@@ -10,3 +10,5 @@ orionjs:styles
 orionjs:summernote@0.2.4
 summernote:summernote
 manuelschoebel:ms-seo
+iron:router
+twbs:bootstrap
