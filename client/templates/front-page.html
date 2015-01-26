@@ -1,6 +1,36 @@
 <template name="frontPage">
-  <h1>Front Page</h1>
-  <ul class="list-inline">
-    <li><a href="{{pathFor 'dreams'}}">GeoDreamers</a></li>
-  </ul>
+  <div class="front-page">
+    <div class="row communities">
+      <div class="col-sm-4">
+        <p>
+          <img src="img/geodreamer.jpg" class="img-responsive" alt="GeoDreamer">
+        </p>
+        <p>
+          Dream. Invent. Think. Brainstorm.<br>
+          This is where you dream of ideas for others to build.
+        </p>
+        <a href="{{pathFor 'dreams'}}" class="btn btn-primary btn-block dream">Dream</a>
+      </div>
+      <div class="col-sm-4">
+        <p>
+          <img src="img/geomaker.jpg" class="img-responsive" alt="GeoMaker">
+        </p>
+        <p>
+          Blueprints. Schematics. Drawings.<br>
+          Instructions. 3D Print. Make GeoDreams a physical reality.
+        </p>
+        <a href="{{pathFor 'recipes'}}" class="btn btn-primary btn-block make">Make</a>
+      </div>
+      <div class="col-sm-4">
+        <p>
+          <img src="img/geobooster.jpg" class="img-responsive" alt="GeoBooster">
+        </p>
+        <p>
+          Download. Collect. Investigate.<br>
+          Boost and share data of your surroundings or universe.
+        </p>
+        <a href="{{pathFor 'activities'}}" class="btn btn-primary btn-block boost">Boost</a>
+      </div>
+    </div>
+  </div>
 </template>

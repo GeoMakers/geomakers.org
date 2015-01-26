@@ -1,0 +1,27 @@
+@dream: #8f0ad7;
+@make: #0a90d7;
+@boost: #0ad78c;
+
+.front-page {
+  .row.communities > div {
+    text-align: center;
+    p {
+      margin-top: 10px;
+    }
+    .btn {
+      color: #fff;
+      &.dream {
+        background-color: @dream;
+        border-color: darken(@dream, 5%);
+      }
+      &.make {
+        background-color: @make;
+        border-color: darken(@make, 5%);
+      }
+      &.boost {
+        background-color: @boost;
+        border-color: darken(@boost, 5%);
+      }
+    }
+  }
+}
