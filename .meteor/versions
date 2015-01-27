@@ -22,7 +22,6 @@ ejson@1.0.5
 email@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
-fortawesome:fontawesome@4.2.0
 geojson-utils@1.0.2
 html-tools@1.0.3
 htmljs@1.0.3
@@ -56,6 +55,8 @@ momentjs:moment@2.8.4
 mongo@1.0.11
 mongo-livedata@1.0.7
 natestrauser:font-awesome@4.2.0_1
+nemo64:bootstrap@3.3.1_1
+nemo64:bootstrap-data@3.3.1_1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
@@ -77,10 +78,8 @@ spacebars@1.0.5
 spacebars-compiler@1.0.4
 srp@1.0.2
 summernote:standalone@0.6.0
-summernote:summernote@0.6.0_1
 templating@1.0.11
 tracker@1.0.5
-twbs:bootstrap@3.3.1
 ui@1.0.5
 underscore@1.0.2
 url@1.0.3

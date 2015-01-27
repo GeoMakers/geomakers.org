@@ -1,7 +1,9 @@
 <template name="dreams">
-  <ul>
-    {{#each dreams}}
-      <a href="{{pathFor 'dream'}}"><li>{{title}}</li></a>
-    {{/each}}
-  </ul>
+  <div class="container">
+    <ul>
+      {{#each dreams}}
+        <a href="{{pathFor 'dream'}}"><li>{{title}}</li></a>
+      {{/each}}
+    </ul>
+  </div>
 </template>

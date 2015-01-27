@@ -1,35 +1,54 @@
 <template name="frontPage">
   <div class="front-page">
-    <div class="row communities">
-      <div class="col-sm-4">
-        <p>
-          <img src="img/geodreamer.jpg" class="img-responsive" alt="GeoDreamer">
-        </p>
-        <p>
-          Dream. Invent. Think. Brainstorm.<br>
-          This is where you dream of ideas for others to build.
-        </p>
-        <a href="{{pathFor 'dreams'}}" class="btn btn-primary btn-block dream">Dream</a>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="//player.vimeo.com/video/112098501?portrait=0&amp;byline=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h1>Welcome to GeoMakers</h1>
+            <p>
+              GeoMakers is an open community that collaborates to dream, build and implement open source Maker’s projects that involve mapping, remote sensing, navigating, and understanding our world geographically. We seek to change how people see and interact with our world by using inexpensive DIY techniques.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <p>
-          <img src="img/geomaker.jpg" class="img-responsive" alt="GeoMaker">
-        </p>
-        <p>
-          Blueprints. Schematics. Drawings.<br>
-          Instructions. 3D Print. Make GeoDreams a physical reality.
-        </p>
-        <a href="{{pathFor 'recipes'}}" class="btn btn-primary btn-block make">Make</a>
-      </div>
-      <div class="col-sm-4">
-        <p>
-          <img src="img/geobooster.jpg" class="img-responsive" alt="GeoBooster">
-        </p>
-        <p>
-          Download. Collect. Investigate.<br>
-          Boost and share data of your surroundings or universe.
-        </p>
-        <a href="{{pathFor 'activities'}}" class="btn btn-primary btn-block boost">Boost</a>
+    </div>
+    <div class="container">
+      <div class="communities">
+        <div class="dream">
+          <p>
+            <img src="img/geodreamer.jpg" class="img-responsive" alt="GeoDreamer">
+          </p>
+          <p>
+            Dream. Invent. Think. Brainstorm.<br>
+            This is where you dream of ideas for others to build.
+          </p>
+          <a href="{{pathFor 'dreams'}}" class="btn">Dream</a>
+        </div>
+        <div class="make">
+          <p>
+            <img src="img/geomaker.jpg" class="img-responsive" alt="GeoMaker">
+          </p>
+          <p>
+            Blueprints. Schematics. Drawings.<br>
+            Instructions. 3D Print. Make GeoDreams a physical reality.
+          </p>
+          <a href="{{pathFor 'recipes'}}">Make</a>
+        </div>
+        <div class="boost">
+          <p>
+            <img src="img/geobooster.jpg" class="img-responsive" alt="GeoBooster">
+          </p>
+          <p>
+            Download. Collect. Investigate.<br>
+            Boost and share data of your surroundings or universe.
+          </p>
+          <a href="{{pathFor 'activities'}}">Boost</a>
+        </div>
       </div>
     </div>
   </div>

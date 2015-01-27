@@ -1,26 +1,34 @@
+@import "../lib/bootstrap/custom.bootstrap.less";
+@import "../lib/bootstrap/custom.bootstrap.import.less";
+
 @dream: #8f0ad7;
 @make: #0a90d7;
 @boost: #0ad78c;
 
 .front-page {
-  .row.communities > div {
-    text-align: center;
-    p {
-      margin-top: 10px;
-    }
-    .btn {
-      color: #fff;
-      &.dream {
-        background-color: @dream;
-        border-color: darken(@dream, 5%);
+  .jumbotron {
+    margin-top: -20px;
+  }
+  .communities {
+    .make-row();
+    & > div {
+      .make-sm-column(4);
+      text-align: center;
+      p {
+        margin-top: 10px;
       }
-      &.make {
-        background-color: @make;
-        border-color: darken(@make, 5%);
+      & > a {
+        .btn;
+        .btn-block;
       }
-      &.boost {
-        background-color: @boost;
-        border-color: darken(@boost, 5%);
+      &.dream > a {
+        .button-variant(#fff, @dream, darken(@dream, 5%));
+      }
+      &.make > a {
+        .button-variant(#fff, @make, darken(@make, 5%));
+      }
+      &.boost > a {
+        .button-variant(#fff, @boost, darken(@boost, 5%));
       }
     }
   }
