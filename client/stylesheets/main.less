@@ -1,14 +1,25 @@
-@import "../lib/bootstrap/custom.bootstrap.less";
 @import "../lib/bootstrap/custom.bootstrap.import.less";
 
-@dream: #8f0ad7;
-@make: #0a90d7;
-@boost: #0ad78c;
+.navbar-brand img {
+  height: 20px;
+}
 
 .front-page {
   .jumbotron {
     // No white space between navbar and full width jumbotron on front page
     margin-top: -20px;
+    background: lighten(@brand-primary, 10%);
+    color: #fff;
+    h1 {
+      // On large screens, jumbotron content is in two columns and the heading must top align with the other column
+      @media (min-width: @screen-lg-min) {
+        margin-top: 0;
+      }
+      // Scale jumbotron heading size down a tad
+      @media (min-width: @screen-sm-min) {
+        font-size: (@font-size-base * 3.6);
+      }
+    }
   }
   .communities {
     .make-row();
@@ -18,18 +29,17 @@
       p {
         margin-top: 10px;
       }
-      & > a {
-        .btn;
-        .btn-block;
+      & > .btn {
+        width: 50%;
       }
-      &.dream > a {
-        .button-variant(#fff, @dream, darken(@dream, 5%));
+      &.dream > .btn {
+        .button-variant(#fff, @brand-dream, darken(@brand-dream, 5%));
       }
-      &.make > a {
-        .button-variant(#fff, @make, darken(@make, 5%));
+      &.make > .btn {
+        .button-variant(#fff, @brand-make, darken(@brand-make, 5%));
       }
-      &.boost > a {
-        .button-variant(#fff, @boost, darken(@boost, 5%));
+      &.boost > .btn {
+        .button-variant(#fff, @brand-boost, darken(@brand-boost, 5%));
       }
     }
   }
