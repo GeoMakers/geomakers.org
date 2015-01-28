@@ -21,11 +21,15 @@
       }
     }
   }
-  .communities {
+  .communities, .information, .donate {
     .make-row();
+    .clearfix(); // For some reason make-row doesn't seem to include clearfix as it should. Must be a bug in nemo64:bootstrap (or perhaps even Bootstrap itself).
+    text-align: center;
+    margin-bottom: @line-height-computed;
+  }
+  .communities {
     & > div {
       .make-sm-column(4);
-      text-align: center;
       p {
         margin-top: 10px;
       }
@@ -41,6 +45,17 @@
       &.boost > .btn {
         .button-variant(#fff, @brand-boost, darken(@brand-boost, 5%));
       }
+    }
+  }
+  .information {
+    & > div {
+      .make-sm-column(6);
+    }
+  }
+  .donate {
+    & > div {
+      .make-sm-column(8);
+      .make-sm-column-offset(2);
     }
   }
 }
