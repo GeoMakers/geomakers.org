@@ -1,0 +1,389 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "Name": "HeatSync Labs",
+      "Address": "140 W Main St, Mesa, AZ 85201",
+      "URL": "http://www.heatsynclabs.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-111.835517, 33.415112]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "The Crucible",
+      "Address": "1260 7th St. Oakland, CA 94607",
+      "URL": "http://thecrucible.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.290584, 37.804416]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Noisebridge",
+      "Address": "2169 Mission St, 3rd floor San Francisco, CA 94110",
+      "URL": "https://www.noisebridge.net/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.419417, 37.762434]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Biocurious",
+      "Address": "845 Stewart Drive, Suite C Sunnyvale, CA 94085",
+      "URL": "http://biocurious.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.010633, 37.383969]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Double Union",
+      "Address": "333 Valencia Street #445, San Francisco, CA 94103.",
+      "URL": "https://www.doubleunion.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.18507113, 30.36218381]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Vocadaemy",
+      "Address": "1635 Spruce Street, Riverside, CA 92507",
+      "URL": "http://www.vocademy.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-117.3471709, 33.99039516]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "ACE Monster Toys",
+      "Address": "6050 Lowell St\nOakland, CA 94608",
+      "URL": "http://acemonstertoys.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.273009, 37.844868]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Yale Center for Engineering Innovation and Design",
+      "Address": "Prospect St, New Haven, CT 06511",
+      "URL": "http://ceid.yale.edu/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-72.925337, 41.3127477]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Tampa Hackerspace",
+      "Address": "4931 W. Nassau Street\nTampa, FL 33607",
+      "URL": "http://tampahackerspace.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-82.527533, 27.954169]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "FamiLAB",
+      "Address": "1355 Bennett Drive, Longwood FL 32750",
+      "URL": "http://familab.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-81.35202949, 28.68693878]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "7Hills Makerspace",
+      "Address": "336 Broad St Suite 300, Rome, Georgia 30161",
+      "URL": "http://7hillsmake.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-85.172464, 34.254104]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "HackPittsburg",
+      "Address": "1936 5th Ave. Pittsburgh, PA 15219",
+      "URL": "http://www.hackpittsburgh.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-79.9496369, 40.4468715]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Artisan's Asylum",
+      "Address": "10 Tyler St Somerville, MA 02143",
+      "URL": "http://artisansasylum.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-71.10527, 42.381667]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "4th Floor (Chattanooga Public Library)",
+      "Address": "1001 Broad Street Chattanooga, TN 37402",
+      "URL": "http://chattlibrary.org/4th-floor"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-85.3103823, 35.0451817]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pumping Station One",
+      "Address": "3519 N. Elston\nChicago, IL 60618",
+      "URL": "http://pumpingstationone.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.706695, 41.945156]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Lawrence Creates Makerspace",
+      "Address": "512 E 9th St Lawrence, KS 66044",
+      "URL": "http://lawrencecreates.info/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-95.2305425, 38.9677194]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "LVL1 Hackerspace",
+      "Address": "1205 E. Washington St.\nLouisville, KY 40206",
+      "URL": "http://www.lvl1.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-85.72970997, 38.25654332]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "I3 Detroit",
+      "Address": "1481A Wordsworth St. Ferndale, MI, 48220",
+      "URL": "http://www.i3detroit.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-83.1204799, 42.453482]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "The Hack Factory",
+      "Address": "3119 E. 26th StreetMinneapolis, MN 55406",
+      "URL": "http://www.tcmaker.org/blog/hack-factory/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-93.226742, 44.955589]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Arch Reactor",
+      "Address": "Jefferson Underground Building\n2400 South Jefferson Avenue\nSt. Louis, MO 63104",
+      "URL": "http://www.archreactor.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-90.22263, 38.606786]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Bozeman Makerspace",
+      "Address": "1018 E Griffin Dr, Bozeman, MT 59715",
+      "URL": "http://bozemanmakers.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-111.0288469, 45.700044]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Omaha Maker Group",
+      "Address": "8410 K Street, #5, Omaha NE 68127",
+      "URL": "http://omahamakergroup.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-75.104807, 40.0079615]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Delamare Library, University of Nevada, Reno",
+      "Address": "1664 N. Virginia Street Mailstop 262 - Reno, NV 89557-0262",
+      "URL": "http://www.delamare.unr.edu/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-119.821239, 39.548261]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Quelab",
+      "Address": "680 Haines Avenue NW \nAlbuquerque, NM 87102",
+      "URL": "http://quelab.net/wordpress/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-106.6527064, 35.10299015]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Genspace",
+      "Address": "33 Flatbush Avenue, 7th Floor Brooklyn, NY 11217",
+      "URL": "http://www.genspace.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.980342, 40.688053]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "NYC Resistor",
+      "Address": "87 3rd Avenue, 4th Floor, Brooklyn, NY 11217 ",
+      "URL": "http://www.nycresistor.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.981831, 40.683656]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Columbus IDEA Foundry",
+      "Address": "421 W. State St. Columbus, OH 43215",
+      "URL": "http://www.columbusideafoundry.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-83.011625, 39.958839]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Lorain County Community College Fab Lab",
+      "Address": "Nord Advanced Technologies Center\nRoom AT113\nLorain County Community College\n1005 North Abbe Rd., Elyria, Ohio 44035",
+      "URL": "http://www.lorainccc.edu/Academic+Divisions/Engineering+Technologies/Fab+Lab/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-82.078191, 41.356114]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "TechCentral MakerSpace (Cleveland Public Library)",
+      "Address": "Louis Stokes Wing\nLower Level\n325 Superior Ave\nCleveland, Ohio 44114",
+      "URL": "http://www.cpl.org/TheLibrary/TechCentral/TechCentralMakerSpace.aspx"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-81.6918, 41.500629]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "ADX",
+      "Address": "417 SE 11th Avenue\nPortland, OR 97214",
+      "URL": "http://www.adxportland.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.65464, 45.519943]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "ATX Hackerspace",
+      "Address": "9701 Dessau Road, Building 3, Suite 304, Austin TX 78754",
+      "URL": "http://www.atxhs.org/wiki/Main_Page"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-97.672476, 30.356148]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Dallas Makerspace",
+      "Address": "1825 Monetary Lane\nSuite 104\nCarrollton, TX 75006",
+      "URL": "http://dallasmakerspace.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-96.907872, 32.942658]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "NOVA Labs",
+      "Address": "1881-F Metro Center Drive Reston, VA 20190",
+      "URL": "http://www.nova-labs.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-85.361113, 38.401569]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Milwaukee Makerspace",
+      "Address": "2555 S. Lenox St.\nMilwaukee, WI, 53207",
+      "URL": "http://milwaukeemakerspace.org/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.89825072, 42.99823167]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Name": "Sector67",
+      "Address": "2100 Winnebago St\nMadison, WI 53704",
+      "URL": "http://www.sector67.org/blog/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-89.35365, 43.093973]
+    }
+  }]
+}
