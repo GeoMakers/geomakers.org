@@ -17,8 +17,17 @@ Template.makerspaces.rendered = function () {
           autocomplete: true
         }));
 
-      L.mapbox.featureLayer()
+      var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data/makerspaces.geojson')
+        .on('ready', function() {
+          featureLayer.eachLayer(function(layer) {
+            var content =
+              '<h2>' + layer.feature.properties.name + '</h2>' +
+              '<address>' + layer.feature.properties.address + '</address>' +
+              '<a href="' + layer.feature.properties.url + '" target="_blank">' + layer.feature.properties.url + '</a>';
+            layer.bindPopup(content);
+          });
+        })
         .addTo(map);
     }
   });
