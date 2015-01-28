@@ -9,7 +9,7 @@ Template.makerspaces.rendered = function () {
       var map = L.mapbox.map('map', 'geomakers.l2i93ia9', {
         featureLayer: false, // Disable built-in Mapbox feature layer (we load features our own GeoJSON)
         maxZoom: 18,
-        center: [40.48, -97.38],
+        center: [37.35, -96.88],
         zoom: 4
       })
         .addControl(L.control.locate())
