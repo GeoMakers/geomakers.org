@@ -30,19 +30,16 @@
   .communities {
     & > div {
       .make-sm-column(4);
-      p {
-        margin-top: 10px;
-      }
-      & > .btn {
+      .btn {
         width: 50%;
       }
-      &.dream > .btn {
+      &.dream .btn {
         .button-variant(#fff, @brand-dream, darken(@brand-dream, 5%));
       }
-      &.make > .btn {
+      &.make .btn {
         .button-variant(#fff, @brand-make, darken(@brand-make, 5%));
       }
-      &.boost > .btn {
+      &.boost .btn {
         .button-variant(#fff, @brand-boost, darken(@brand-boost, 5%));
       }
     }
