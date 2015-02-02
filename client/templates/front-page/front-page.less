@@ -26,8 +26,21 @@
   .communities {
     & > div {
       .make-sm-column(4);
+      margin-bottom: 1.5*@line-height-computed;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 0;
+      }
+      img {
+        max-width: 75%;
+        @media (min-width: @screen-sm-min) {
+          max-width: 100%;
+        }
+      }
       .btn {
-        width: 50%;
+        width: 25%;
+        @media (min-width: @screen-sm-min) {
+          width: 50%;
+        }
       }
       &.dream .btn {
         .button-variant(#fff, @brand-dream, darken(@brand-dream, 5%));
