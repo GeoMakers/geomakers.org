@@ -1,4 +1,5 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
+@import "/client/templates/app/app.mixins.import.less";
 
 .front-page {
   .jumbotron {
@@ -43,13 +44,13 @@
         }
       }
       &.dream .btn {
-        .button-variant(#fff, @brand-dream, darken(@brand-dream, 5%));
+        .btn-dream;
       }
       &.make .btn {
-        .button-variant(#fff, @brand-make, darken(@brand-make, 5%));
+        .btn-make;
       }
       &.boost .btn {
-        .button-variant(#fff, @brand-boost, darken(@brand-boost, 5%));
+        .btn-boost;
       }
     }
   }
