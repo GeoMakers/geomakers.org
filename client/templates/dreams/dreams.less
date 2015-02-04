@@ -1,0 +1,47 @@
+@import "/client/lib/bootstrap/custom.bootstrap.import.less";
+
+@dream-content-gutter: 20px;
+
+.dreams {
+  .media-list {
+    li {
+      & > .media-body {
+        h3 {
+          margin: 12.5px 0;
+          font-size: @font-size-h4;
+        }
+        h2 {
+          font-size: @font-size-h3;
+        }
+        & > a {
+          & > div {
+            .make-row(@gutter: @dream-content-gutter);
+            & > .img {
+              .make-sm-column(4, @gutter: @dream-content-gutter);
+            }
+            & > .text {
+              .make-sm-column(8, @gutter: @dream-content-gutter);
+              @media (min-width: @screen-sm-min) {
+                h2 {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+          p {
+            color: @text-color;
+          }
+          &:hover {
+            text-decoration: none;
+            h2 {
+              text-decoration: underline;
+            }
+            p {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
