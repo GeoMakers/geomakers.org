@@ -1,5 +1,5 @@
 Template.dreams.helpers({
-  creator: function() {
+  author: function() {
     return Meteor.users.findOne(this.createdBy);
   }
 });
