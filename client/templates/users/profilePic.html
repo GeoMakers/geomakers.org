@@ -1,5 +1,5 @@
 <template name="profilePic">
   <a href="{{pathFor 'user'}}" class="profile-pic">
-    <img class="img-circle" src="{{gravatarImageUrl}}" alt="Profile Picture">
+    {{> avatar user=this shape='circle'}}
   </a>
 </template>
