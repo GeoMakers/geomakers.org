@@ -1,5 +1,11 @@
+var getAuthor = function() {
+  return Meteor.users.findOne(this.createdBy);
+};
+
 Template.dreams.helpers({
-  author: function() {
-    return Meteor.users.findOne(this.createdBy);
-  }
+  author: getAuthor
+});
+
+Template.dream.helpers({
+  author: getAuthor
 });

@@ -4,3 +4,7 @@ Template.registerHelper('preview', function(value, options) {
   if(content.length > length) content = content.substring(0, length-1).trim() + '…';
   return content;
 });
+
+Template.registerHelper('date', function(date) {
+  return moment(date).format('lll');
+});

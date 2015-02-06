@@ -1,6 +1,27 @@
 <template name="dream">
-  <div class="container">
-    <h1>{{title}}</h1>
-    {{{body}}}
+  <div class="dream">
+    <header class="page-header">
+      <div class="container">
+        <h1>{{title}}</h1>
+        <p>
+          {{#with author}}
+            {{> profilePic}}
+            <a href="{{pathFor 'user'}}">{{profile.name}}</a>
+          {{/with}}
+          <small>{{date createdAt}}</small>
+        </p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-8">
+          {{{body}}}
+        </div>
+        <div class="col-sm-5 col-md-4">
+          {{> ad}}
+          {{> sharing}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
