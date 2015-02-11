@@ -2,7 +2,7 @@ var getAuthor = function() {
   return Meteor.users.findOne(this.createdBy);
 };
 
-Template.dreams.helpers({
+Template.dreamsList.helpers({
   author: getAuthor
 });
 

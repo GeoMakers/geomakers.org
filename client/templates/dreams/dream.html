@@ -32,7 +32,7 @@
           {{#if tags}}
             <h2>Tags</h2>
             {{#each tags}}
-              <a href="{{pathFor 'tag'}}" class="label label-default">{{this}}</a>
+              <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
             {{/each}}
           {{/if}}
         </div>
