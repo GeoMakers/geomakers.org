@@ -1,8 +1,31 @@
 <template name="user">
-  <div class="container">
-    <h1>
-      {{> profilePic size='large'}}
-      {{profile.name}}
-    </h1>
+  <div class="user">
+    <header class="page-header">
+      <div class="container">
+        <h1>
+          {{> profilePic size='large'}}
+          {{profile.name}}
+        </h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem ad corporis. At doloribus natus voluptatum illo numquam labore, sint vel, ratione ex obcaecati quaerat error delectus totam? A, aliquid.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem ad corporis. At doloribus natus voluptatum illo numquam labore, sint vel, ratione ex obcaecati quaerat error delectus totam? A, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem ad corporis. At doloribus natus voluptatum illo numquam labore, sint vel, ratione ex obcaecati quaerat error delectus totam? A, aliquid.</p>
+        </div>
+        <div class="col-sm-5 col-md-4">
+          {{> ad}}
+          {{#if dreams}}
+            <h2>Dreams</h2>
+            <ul>
+              {{#each dreams}}
+                <li><a href="{{pathFor 'dream'}}">{{title}}</a></li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
