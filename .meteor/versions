@@ -17,7 +17,7 @@ callback-hook@1.0.2
 check@1.0.4
 chhib:selectize-bootstrap-3@0.0.1
 coffeescript@1.0.5
-comerc:autoform-selectize@2.2.0
+comerc:autoform-selectize@2.2.2
 copleykj:livestamp@1.1.5
 dburles:collection-helpers@1.0.2
 ddp@1.0.14

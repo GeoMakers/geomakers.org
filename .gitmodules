@@ -1,3 +1,0 @@
-[submodule "packages/meteor-autoform-selectize"]
-	path = packages/meteor-autoform-selectize
-	url = https://github.com/SimonEngelhardt/meteor-autoform-selectize.git
