@@ -27,7 +27,14 @@
         </div>
         <div class="col-sm-5 col-md-4">
           {{> ad}}
+          <h2>Share</h2>
           {{> sharing}}
+          {{#if tags}}
+            <h2>Tags</h2>
+            {{#each tags}}
+              <a href="{{pathFor 'tag'}}" class="label label-default">{{this}}</a>
+            {{/each}}
+          {{/if}}
         </div>
       </div>
     </div>
