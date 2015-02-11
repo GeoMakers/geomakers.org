@@ -52,9 +52,12 @@ ul.dreams.media-list {
     color: #fff;
     a {
       color: #fff;
-    }
-    .profile-pic:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        & > .name {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

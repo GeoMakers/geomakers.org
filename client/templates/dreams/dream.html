@@ -5,8 +5,10 @@
         <h1>{{title}}</h1>
         <p>
           {{#with author}}
-            {{> profilePic}}
-            <a href="{{pathFor 'user'}}">{{profile.name}}</a>
+            <a href="{{pathFor 'user'}}">
+              {{> profilePic}}
+              <span class="name">{{profile.name}}</span>
+            </a>
           {{/with}}
           <small>{{date createdAt}}</small>
         </p>

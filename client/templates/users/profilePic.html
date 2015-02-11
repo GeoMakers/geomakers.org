@@ -1,5 +1,3 @@
 <template name="profilePic">
-  <a href="{{pathFor 'user'}}" class="profile-pic">
-    {{> avatar user=this shape='circle'}}
-  </a>
+  {{> avatar user=this class='profile-pic' shape='circle' size=size}}
 </template>

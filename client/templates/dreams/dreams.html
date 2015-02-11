@@ -9,11 +9,15 @@
     {{#each dreams}}
       <li class="media">
         <div class="media-left">
-          {{> profilePic author}}
+          {{#with author}}
+            <a href="{{pathFor 'user'}}">{{> profilePic}}</a>
+          {{/with}}
         </div>
         <div class="media-body">
           <h3>
-            <a href="{{pathFor 'user'}}">{{author.profile.name}}</a>
+            {{#with author}}
+              <a href="{{pathFor 'user'}}">{{profile.name}}</a>
+            {{/with}}
             <small>{{livestamp createdAt}}</small>
           </h3>
           <a href="{{pathFor 'dream'}}">
