@@ -19,9 +19,29 @@
             <a href="{{pathFor 'dreams'}}">GeoDreamers</a>
           </li>
         </ul>
-        <div class="navbar-right">
-          {{> atNavButton}}
-        </div>
+        <ul class="nav navbar-nav navbar-right">
+          {{#if currentUser}}
+            <li class="dropdown">
+              {{#with currentUser}}
+                <a href="{{pathFor 'user'}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                  {{> profilePic size='extra-small'}}
+                  {{profile.name}}
+                  <span class="fa fa-caret-down"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{{pathFor 'user'}}"><i class="fa fa-user fa-fw"></i> My Profile</a></li>
+                  <li><a href="{{pathFor 'userEdit'}}"><i class="fa fa-pencil fa-fw"></i> Edit Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="sign-out-button"><i class="fa fa-sign-out fa-fw"></i> Sign Out</a></li>
+                </ul>
+              {{/with}}
+            </li>
+          {{else}}
+            <li>
+              <a href="{{pathFor 'atSignIn'}}"><i class="fa fa-sign-in"></i> Sign In</a>
+            </li>
+          {{/if}}
+        </ul>
       </div>
     </div>
   </nav>
