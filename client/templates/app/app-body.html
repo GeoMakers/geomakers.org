@@ -24,7 +24,7 @@
             <li class="dropdown">
               {{#with currentUser}}
                 <a href="{{pathFor 'user'}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                  {{> profilePic size='extra-small'}}
+                  {{> avatar user=this size='extra-small'}}
                   {{profile.name}}
                   <span class="fa fa-caret-down"></span>
                 </a>

@@ -10,7 +10,7 @@
       <li class="media">
         <div class="media-left">
           {{#with author}}
-            <a href="{{pathFor 'user'}}">{{> profilePic}}</a>
+            <a href="{{pathFor 'user'}}">{{> avatar user=this}}</a>
           {{/with}}
         </div>
         <div class="media-body">

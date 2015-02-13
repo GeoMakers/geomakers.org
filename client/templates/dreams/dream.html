@@ -6,7 +6,7 @@
         <p>
           {{#with author}}
             <a href="{{pathFor 'user'}}">
-              {{> profilePic}}
+              {{> avatar user=this}}
               <span class="name">{{profile.name}}</span>
             </a>
           {{/with}}

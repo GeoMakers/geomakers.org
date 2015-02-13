@@ -1,14 +1,45 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
 
-.profile-pic.avatar {
+@avatar-border-width: 5px;
+
+.avatar {
   display: inline-block;
+
+  img, .avatar-initials {
+    border-radius: 50%;
+  }
   &:not(.avatar-extra-small) {
     img, .avatar-initials {
-      border: 5px solid @gray-lighter;
+      border: @avatar-border-width solid @gray-lighter;
     }
   }
+
+  &:not(.avatar-hide-initials) {
+    .avatar-initials {
+      display: inline-block;
+    }
+  }
+
+  // Adjust avatar-initials line-height to regular line-height minus top and bottom borders (unfortunately, we don't have variables for those)
   .avatar-initials {
-    line-height: 40px;
+    line-height: 50px - 2*@avatar-border-width;
+  }
+  &.avatar-large {
+    .avatar-initials {
+      line-height: 80px - 2*@avatar-border-width;
+    }
+  }
+  &.avatar-small {
+    .avatar-initials {
+      line-height: 30px - 2*@avatar-border-width;
+    }
+  }
+  &.avatar-extra-small {
+    height: @line-height-computed;
+    width: @line-height-computed;
+    .avatar-initials {
+      line-height: @line-height-computed; //extra-small has no borders (see above)
+    }
   }
 }
 
