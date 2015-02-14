@@ -17,6 +17,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-7 col-md-8">
+          {{#if images}}
+            {{> gallery images}}
+          {{/if}}
           {{{body}}}
           {{#if links}}
             <h2>Links</h2>
