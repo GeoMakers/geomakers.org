@@ -1,3 +1,9 @@
+Template.gallery.helpers({
+  index: function() {
+    return Template.parentData().indexOf(this) + 1;
+  }
+});
+
 Template.gallery.rendered = function() {
   var $gallery = this.$(this.firstNode);
 
