@@ -10,13 +10,15 @@ Template.gallery.rendered = function() {
   // Set up observation, so gallery will be automatically reinitialized if images change
   this.autorun(function() {
     // Establish dependency on gallery images
-    Template.currentData();
+    var images = Template.currentData();
 
     // Schedule gallery initialization after DOM has been updated
     Tracker.afterFlush(function() {
-      $gallery.justifiedGallery({
-        captions: false
-      });
+      if (images.length > 1) {
+        $gallery.justifiedGallery({
+          captions: false
+        });
+      }
     });
   });
 };
