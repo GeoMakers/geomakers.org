@@ -3,7 +3,12 @@ var getAuthor = function() {
 };
 
 Template.dreamsList.helpers({
-  author: getAuthor
+  author: getAuthor,
+  image: function() {
+    if (this.images && this.images.length > 0) {
+      return this.images[0];
+    }
+  }
 });
 
 Template.dream.helpers({

@@ -22,9 +22,11 @@
           </h3>
           <a href="{{pathFor 'dream'}}">
             <div>
-              <div class="img">
-                <img class="img-responsive" src="http://lorempixel.com/400/200" alt="...">
-              </div>
+              {{#if image}}
+                <div class="img">
+                  <img class="img-responsive" src="{{image.url}}" alt="Image for {{title}}">
+                </div>
+              {{/if}}
               <div class="text">
                 <h2>{{title}}</h2>
                 <p>{{preview body length=200}}</p>
