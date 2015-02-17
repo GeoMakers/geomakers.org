@@ -1,9 +1,3 @@
-Template.gallery.helpers({
-  index: function() {
-    return Template.parentData().indexOf(this) + 1;
-  }
-});
-
 Template.gallery.rendered = function() {
   var $gallery = this.$(this.firstNode);
 
@@ -14,9 +8,10 @@ Template.gallery.rendered = function() {
 
     // Schedule gallery initialization after DOM has been updated
     Tracker.afterFlush(function() {
-      if (images.length > 1) {
+      if (images.count() > 1) {
         $gallery.justifiedGallery({
-          captions: false
+          captions: false,
+          rowHeight: 100
         });
       }
     });

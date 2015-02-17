@@ -27,3 +27,8 @@ orionjs:s3
 orionjs:file-attribute
 micah:justified-gallery
 horka:swipebox
+cfs:standard-packages
+cfs:filesystem
+cfs:s3
+cfs:graphicsmagick
+yogiben:autoform-file
