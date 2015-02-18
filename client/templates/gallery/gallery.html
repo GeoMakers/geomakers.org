@@ -1,9 +1,20 @@
 <template name="gallery">
   <div class="gallery">
-    {{#each this}}
-      <a href="{{url}}" class="swipebox">
-        <img src="{{url}}" alt="Image {{index}}" class="img-responsive">
-      </a>
-    {{/each}}
+    <div class="selected-image">
+      {{#each this}}
+        <a href="{{url}}" class="swipebox">
+          <img data-lazy="{{url}}" alt="Image {{index}}" class="img-responsive">
+        </a>
+      {{/each}}
+    </div>
+    {{#if hasMultipleImages}}
+      <div class="thumbnails">
+        {{#each this}}
+          <div>
+            <img data-lazy="{{url}}" alt="Image {{index}}" class="img-responsive">
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
   </div>
 </template>
