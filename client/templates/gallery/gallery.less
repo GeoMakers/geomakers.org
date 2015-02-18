@@ -1,13 +1,27 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
 
+@gallery-background: #000;
+@gallery-arrow-padding: 5px;
+
 .gallery {
+  background: @gallery-background;
   margin-bottom: @line-height-computed / 2;
-  .slick-slider {
-    margin-bottom: 0;
+  .thumbnails {
+    border: 1px solid @gallery-background;
+    img {
+      border: 1px solid @gallery-background;
+    }
+    .slick-center img {
+      border-color: @body-bg;
+    }
+    .slick-prev {
+      left: @gallery-arrow-padding;
+    }
+    .slick-next {
+      right: @gallery-arrow-padding;
+    }
   }
-  .slick-dots {
-    position: relative;
-    bottom: 0;
+  .slick-slider {
     margin-bottom: 0;
   }
 }

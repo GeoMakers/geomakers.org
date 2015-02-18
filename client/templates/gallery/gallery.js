@@ -24,17 +24,16 @@ Template.gallery.rendered = function() {
       $gallery.find('.selected-image').slick({
        slidesToShow: 1,
        slidesToScroll: 1,
+       infinite: false,
        arrows: false,
-       adaptiveHeight: true,
        asNavFor: '.thumbnails'
       });
       $gallery.find('.thumbnails').slick({
        slidesToShow: 5,
        slidesToScroll: 1,
-       arrows: false,
+       infinite: false,
        centerMode: true,
        focusOnSelect: true,
-       dots: true,
        asNavFor: '.selected-image'
       });
     });
