@@ -7,3 +7,7 @@ Meteor.startup(function() {
 Template.appBody.events({
   'click .sign-out-button': AccountsTemplates.logout
 })
+
+Template.appBody.rendered = function() {
+  SVGInjector(this.$('img[src$=".svg"]'));
+};
