@@ -40,9 +40,6 @@ Template.makerspaces.rendered = function () {
           findNearest(locationEvent.latlng);
         });
 
-        // Request location
-        locateControl.locate();
-
         // Geocoder search result selected event handler
         var geocoderResultMarker;
         geocoderControl.on('select', function(selectEvent) {
