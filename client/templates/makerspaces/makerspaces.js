@@ -72,8 +72,8 @@ Template.makerspaces.rendered = function () {
           var nearest = leafletKnn(geoJsonLayer).nearest(latLng, 1);
           if (nearest.length > 0) {
             var nearestMarker = nearest[0].layer;
-            map.fitBounds([latLng, nearestMarker.getLatLng()]);
             nearestMarker.openPopup();
+            map.fitBounds([latLng, nearestMarker.getLatLng()]);
           }
         }
       });
