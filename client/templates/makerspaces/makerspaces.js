@@ -1,5 +1,5 @@
 Meteor.startup(function(){
-  Mapbox.load('locate');
+  Mapbox.load('locate', 'fullscreen');
 });
 
 Template.makerspaces.rendered = function () {
@@ -22,6 +22,9 @@ Template.makerspaces.rendered = function () {
       var geocoderControl = L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true
       }).addTo(map);
+
+      // Add fullscreen control
+      L.control.fullscreen({position: 'bottomleft'}).addTo(map);
 
       // Load map markers from GeoJSON
       $.getJSON('/data/makerspaces.geojson', function(data) {
