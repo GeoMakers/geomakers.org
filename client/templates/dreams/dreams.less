@@ -1,6 +1,6 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
 
-@dream-content-gutter: 20px;
+@dream-content-gutter: 10px;
 
 ul.dreams.media-list {
   li {
@@ -17,10 +17,10 @@ ul.dreams.media-list {
         & > div {
           .make-row(@gutter: @dream-content-gutter);
           & > .img {
-            .make-sm-column(4, @gutter: @dream-content-gutter);
+            .make-sm-column(2, @gutter: @dream-content-gutter);
           }
           & > .text {
-            .make-sm-column(8, @gutter: @dream-content-gutter);
+            .make-sm-column(10, @gutter: @dream-content-gutter);
             @media (min-width: @screen-sm-min) {
               h2 {
                 margin-top: 0;
