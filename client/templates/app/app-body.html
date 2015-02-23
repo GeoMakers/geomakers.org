@@ -65,38 +65,5 @@
       </div>
     </div>
   </main>
-  <footer>
-    <div class="container">
-      <div class="nav">
-        <div class="about">
-          <strong><a href="{{pathFor 'contentPage' slug='about'}}" class="{{isActivePath regex='about'}}">About</a></strong>
-          <ul class="list-unstyled">
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='contact'}}" class="{{isActivePath regex='about/contact'}}">Contact</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='terms'}}" class="{{isActivePath regex='about/terms'}}">Terms of Use</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='privacy'}}" class="{{isActivePath regex='about/privacy'}}">Privacy Policy</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='partners'}}" class="{{isActivePath regex='about/partners'}}">Partners</a></li>
-          </ul>
-        </div>
-        <div class="connect">
-          <strong>Connect</strong>
-          <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/GeoMakerRevolution" target="_blank"><i class="fa fa-facebook fa-fw"></i>Facebook</a></li>
-            <li><a href="http://twitter.com/geomakers" target="_blank"><i class="fa fa-twitter fa-fw"></i>Twitter</a></li>
-            <li><a href="http://instagram.com/geomakers" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a></li>
-            <li><a href="https://www.youtube.com/channel/UCtLqSFJUOoFGyBmRMlAGH_Q" target="_blank"><i class="fa fa-youtube fa-fw"></i>YouTube</a></li>
-            <li><a href="https://www.linkedin.com/company/geomakers" target="_blank"><i class="fa fa-linkedin fa-fw"></i>LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="info">
-        <div class="brand">
-          <img src="/img/geomakers.svg" alt="GeoMakers">
-        </div>
-        <div class="copyright">
-          © 2015 GeoMakers
-        </div>
-      </div>
-    </div>
-  </footer>
+  {{> footer}}
 </template>

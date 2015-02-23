@@ -1,0 +1,58 @@
+@import "/client/lib/bootstrap/custom.bootstrap.import.less";
+
+footer {
+  margin-top: @line-height-computed;
+  padding: @line-height-computed 0;
+  background: @navbar-inverse-bg;
+  color: @navbar-inverse-color;
+  .nav {
+    strong {
+      display: block;
+      margin-bottom: @line-height-computed / 4;
+    }
+    a {
+      color: @navbar-inverse-link-color;
+      &:hover {
+        color: @navbar-inverse-link-hover-color;
+      }
+      &.active {
+        color: @navbar-inverse-link-active-color;
+      }
+    }
+    .make-row();
+    .about {
+      .make-xs-column(6);
+      .make-sm-column(2);
+    }
+    .connect {
+      .make-xs-column(6);
+      .make-sm-column(2);
+      .make-sm-column-offset(8);
+      li .fa-fw {
+        margin-right: 0.25em;
+      }
+    }
+  }
+  hr {
+    border-color: @navbar-inverse-color;
+  }
+  .info {
+    .make-row();
+    .brand {
+      .make-sm-column(4);
+      svg {
+        height: @line-height-computed;
+        path {
+          fill: @navbar-inverse-color;
+        }
+      }
+    }
+    .copyright {
+      .make-sm-column(3);
+      .make-sm-column-offset(5);
+      @media (min-width: @screen-sm-min) {
+        text-align: right;
+      }
+    }
+  }
+}
