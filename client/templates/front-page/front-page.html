@@ -1,5 +1,5 @@
 <template name="frontPage">
-  <div class="front-page">
+  {{#contentFor 'header'}}
     <div class="jumbotron">
       <div class="container">
         <div class="row">
@@ -17,63 +17,61 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="communities">
-        <div class="dream">
-          <p>
-            <img src="/img/geodreamer.jpg" alt="GeoDreamer">
-          </p>
-          <p>
-            Dream. Invent. Think. Brainstorm.<br>
-            This is where you dream of ideas for others to build.
-          </p>
-          <p>
-            <a href="{{pathFor 'dreams'}}" class="btn">Dream</a>
-          </p>
-        </div>
-        <div class="make">
-          <p>
-            <img src="/img/geomaker.jpg" alt="GeoMaker">
-          </p>
-          <p>
-            Blueprints. Schematics. Drawings.<br>
-            Instructions. 3D Print. Make GeoDreams a physical reality.
-          </p>
-          <p>
-            <a href="{{pathFor 'recipes'}}" class="btn">Make</a>
-          </p>
-        </div>
-        <div class="boost">
-          <p>
-            <img src="/img/geobooster.jpg" alt="GeoBooster">
-          </p>
-          <p>
-            Download. Collect. Investigate.<br>
-            Boost and share data of your surroundings or universe.
-          </p>
-          <p>
-            <a href="{{pathFor 'activities'}}" class="btn">Boost</a>
-          </p>
-        </div>
-      </div>
-      <div class="information">
-        <div>
-          <h2>MakerSpaces</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus incidunt, quae voluptatem. Possimus sunt tempore excepturi eveniet iure, eos tempora exercitationem deleniti error, velit dolores eius in consequatur quia, inventore.</p>
-          <p><a href="{{pathFor 'makerspaces'}}">Find a MakerSpace near you</a></p>
-        </div>
-        <div>
-          <h2>Maker Resources</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit consectetur exercitationem hic, labore. Fugit in qui dolor tempora neque id quis non veritatis, nam aperiam, reprehenderit voluptatibus dolorum officiis, libero.</p>
-        </div>
-      </div>
-      <div class="donate">
-        <div>
-          <h2>{{dict 'frontPageDonateHeading' 'Join and Help Build the GeoMaker Community'}}</h2>
-          {{{dict 'frontPageDonateBody' 'GeoMakers is a free platform. But, it still costs money to write, support, and empower it. Please help this group of spatially aware tinkerers by donating now.'}}}
-          <p><a href="{{pathFor 'contentPage' slug='donate'}}">{{dict 'frontPageDonateLinkText' 'Read more and donate'}}</a></p>
-        </div>
-      </div>
+  {{/contentFor}}
+  <div class="communities">
+    <div class="dream">
+      <p>
+        <img src="/img/geodreamer.jpg" alt="GeoDreamer">
+      </p>
+      <p>
+        Dream. Invent. Think. Brainstorm.<br>
+        This is where you dream of ideas for others to build.
+      </p>
+      <p>
+        <a href="{{pathFor 'dreams'}}" class="btn">Dream</a>
+      </p>
+    </div>
+    <div class="make">
+      <p>
+        <img src="/img/geomaker.jpg" alt="GeoMaker">
+      </p>
+      <p>
+        Blueprints. Schematics. Drawings.<br>
+        Instructions. 3D Print. Make GeoDreams a physical reality.
+      </p>
+      <p>
+        <a href="{{pathFor 'recipes'}}" class="btn">Make</a>
+      </p>
+    </div>
+    <div class="boost">
+      <p>
+        <img src="/img/geobooster.jpg" alt="GeoBooster">
+      </p>
+      <p>
+        Download. Collect. Investigate.<br>
+        Boost and share data of your surroundings or universe.
+      </p>
+      <p>
+        <a href="{{pathFor 'activities'}}" class="btn">Boost</a>
+      </p>
+    </div>
+  </div>
+  <div class="information">
+    <div>
+      <h2>MakerSpaces</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus incidunt, quae voluptatem. Possimus sunt tempore excepturi eveniet iure, eos tempora exercitationem deleniti error, velit dolores eius in consequatur quia, inventore.</p>
+      <p><a href="{{pathFor 'makerspaces'}}">Find a MakerSpace near you</a></p>
+    </div>
+    <div>
+      <h2>Maker Resources</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit consectetur exercitationem hic, labore. Fugit in qui dolor tempora neque id quis non veritatis, nam aperiam, reprehenderit voluptatibus dolorum officiis, libero.</p>
+    </div>
+  </div>
+  <div class="donate">
+    <div>
+      <h2>{{dict 'frontPageDonateHeading' 'Join and Help Build the GeoMaker Community'}}</h2>
+      {{{dict 'frontPageDonateBody' 'GeoMakers is a free platform. But, it still costs money to write, support, and empower it. Please help this group of spatially aware tinkerers by donating now.'}}}
+      <p><a href="{{pathFor 'contentPage' slug='donate'}}">{{dict 'frontPageDonateLinkText' 'Read more and donate'}}</a></p>
     </div>
   </div>
 </template>

@@ -1,9 +1,7 @@
 <template name="tag">
-  <div class="container">
-    <h1>Content tagged with <span class="label label-default">{{tag}}</span></h1>
-    {{#if dreams}}
-      <h2>Dreams</h2>
-      {{> dreamsList}}
-    {{/if}}
-  </div>
+  <h1>Content tagged with <span class="label label-default">{{tag}}</span></h1>
+  {{#if dreams}}
+    <h2>Dreams</h2>
+    {{> dreamsList}}
+  {{/if}}
 </template>

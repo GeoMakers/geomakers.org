@@ -1,47 +1,40 @@
 <template name="dream">
-  <div class="dream">
-    <header class="page-header">
-      <div class="container">
-        <h1>{{title}}</h1>
-        <p>
-          {{#with author}}
-            <a href="{{pathFor 'user'}}">
-              {{> avatar user=this}}
-              <span class="name">{{profile.name}}</span>
-            </a>
-          {{/with}}
-          <small>{{date createdAt}}</small>
-        </p>
-      </div>
-    </header>
+  {{#contentFor 'header'}}
     <div class="container">
-      <div class="row">
-        <div class="col-sm-7 col-md-8">
-          {{#if images}}
-            {{> gallery images}}
-          {{/if}}
-          {{{body}}}
-          {{#if links}}
-            <h2>Links</h2>
-            <ul>
-              {{#each links}}
-                <li><a href="{{this}}" target="_blank">{{this}}</a></li>
-              {{/each}}
-            </ul>
-          {{/if}}
-        </div>
-        <div class="col-sm-5 col-md-4">
-          {{> ad}}
-          <h2>Share</h2>
-          {{> sharing}}
-          {{#if tags}}
-            <h2>Tags</h2>
-            {{#each tags}}
-              <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
-            {{/each}}
-          {{/if}}
-        </div>
-      </div>
+      <h1>{{title}}</h1>
+      <p>
+        {{#with author}}
+          <a href="{{pathFor 'user'}}">
+            {{> avatar user=this}}
+            <span class="name">{{profile.name}}</span>
+          </a>
+        {{/with}}
+        <small>{{date createdAt}}</small>
+      </p>
     </div>
-  </div>
+  {{/contentFor}}
+
+  {{#if images}}
+    {{> gallery images}}
+  {{/if}}
+  {{{body}}}
+  {{#if links}}
+    <h2>Links</h2>
+    <ul>
+      {{#each links}}
+        <li><a href="{{this}}" target="_blank">{{this}}</a></li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  {{#contentFor 'aside'}}
+    <h2>Share</h2>
+    {{> sharing}}
+    {{#if tags}}
+      <h2>Tags</h2>
+      {{#each tags}}
+        <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
+      {{/each}}
+    {{/if}}
+  {{/contentFor}}
 </template>

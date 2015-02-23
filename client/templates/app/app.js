@@ -4,6 +4,12 @@ Meteor.startup(function() {
   };
 });
 
+Template.appBody.helpers({
+  routeName: function() {
+    return Router.current().route.getName();
+  }
+})
+
 Template.appBody.events({
   'click .sign-out-button': AccountsTemplates.logout
 })

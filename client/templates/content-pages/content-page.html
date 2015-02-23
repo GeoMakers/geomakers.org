@@ -1,9 +1,9 @@
 <template name="contentPage">
-  <div class="container">
+  <div class="page-header">
     <h1>{{title}}</h1>
-    {{{body}}}
-    {{#if isDonatePage}}
-      {{> donateButton}}
-    {{/if}}
   </div>
+  {{{body}}}
+  {{#if isDonatePage}}
+    {{> donateButton}}
+  {{/if}}
 </template>
