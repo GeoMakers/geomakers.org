@@ -5,7 +5,7 @@ footer {
   padding: @line-height-computed 0;
   background: @navbar-inverse-bg;
   color: @navbar-inverse-color;
-  .nav {
+  .links {
     strong {
       display: block;
       margin-bottom: @line-height-computed / 4;
@@ -20,14 +20,22 @@ footer {
       }
     }
     .make-row();
-    .about {
+    .clearfix();
+    & > div {
       .make-xs-column(6);
-      .make-sm-column(2);
+    }
+    .nav {
+      .make-sm-column(10);
+      .row {
+        & > div {
+          .make-sm-column(3);
+          .make-lg-column(2);
+          margin-bottom: @line-height-computed / 2;
+        }
+      }
     }
     .connect {
-      .make-xs-column(6);
       .make-sm-column(2);
-      .make-sm-column-offset(8);
       li .fa-fw {
         margin-right: 0.25em;
       }

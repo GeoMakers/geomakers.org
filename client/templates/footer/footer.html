@@ -1,15 +1,28 @@
 <template name="footer">
   <footer>
     <div class="container">
-      <div class="nav">
-        <div class="about">
-          <strong><a href="{{pathFor 'contentPage' slug='about'}}" class="{{isActivePath regex='about'}}">About</a></strong>
-          <ul class="list-unstyled">
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='contact'}}" class="{{isActivePath regex='about/contact'}}">Contact</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='terms'}}" class="{{isActivePath regex='about/terms'}}">Terms of Use</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='privacy'}}" class="{{isActivePath regex='about/privacy'}}">Privacy Policy</a></li>
-            <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='partners'}}" class="{{isActivePath regex='about/partners'}}">Partners</a></li>
-          </ul>
+      <div class="links">
+        <div class="nav">
+          <div class="row">
+            <div>
+              <strong><a href="{{pathFor 'contentPage' sectionSlug='' slug='about'}}" class="{{isActivePath regex='about'}}">About</a></strong>
+              <ul class="list-unstyled">
+                <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='contact'}}" class="{{isActivePath regex='about/contact'}}">Contact</a></li>
+                <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='terms'}}" class="{{isActivePath regex='about/terms'}}">Terms of Use</a></li>
+                <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='privacy'}}" class="{{isActivePath regex='about/privacy'}}">Privacy Policy</a></li>
+                <li><a href="{{pathFor 'contentPage' sectionSlug='about' slug='partners'}}" class="{{isActivePath regex='about/partners'}}">Partners</a></li>
+              </ul>
+            </div>
+            <div>
+              <strong><a href="{{pathFor 'makerspaces'}}" class="{{isActivePath regex='makerspaces'}}">Makerspaces</a></strong>
+            </div>
+            <div>
+              <strong><a href="{{pathFor 'contentPage' sectionSlug='' slug='maker-resources'}}" class="{{isActivePath regex='maker-resources'}}">Maker Resources</a></strong>
+            </div>
+            <div>
+              <strong><a href="{{pathFor 'contentPage' sectionSlug='' slug='donate'}}" class="{{isActivePath regex='donate'}}">Donate</a></strong>
+            </div>
+          </div>
         </div>
         <div class="connect">
           <strong>Connect</strong>
