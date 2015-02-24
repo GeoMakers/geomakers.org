@@ -11,11 +11,11 @@
     {{/if}}
     <div class="container">
       <div class="row">
-        <article class="{{#if hasRegion 'aside'}}col-sm-7 col-md-8{{else}}col-sm-12{{/if}}">
+        <article class="{{#if hasRegion 'aside'}}col-sm-8{{else}}col-sm-12{{/if}}">
           {{> yield}}
         </article>
         {{#if hasRegion 'aside'}}
-          <aside class="col-sm-5 col-md-4">
+          <aside class="col-sm-4">
             {{> ad}}
             {{> yield 'aside'}}
           </aside>
