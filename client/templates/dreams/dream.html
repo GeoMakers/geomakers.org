@@ -14,8 +14,8 @@
     </div>
   {{/contentFor}}
 
-  {{#if images}}
-    {{> gallery images}}
+  {{#if imagesOrVideos}}
+    {{> gallery images=images videos=videos}}
   {{/if}}
   {{{body}}}
   {{#if links}}

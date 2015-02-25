@@ -1,9 +1,22 @@
+var embeds = new ReactiveDict();
+
 Template.gallery.helpers({
-  index: function() {
-    return Template.parentData().indexOf(this) + 1;
+  imageIndex: function() {
+    return Template.parentData().images.indexOf(this) + 1;
   },
-  hasMultipleImages: function() {
-    return this.length > 1;
+  hasMultiple: function() {
+    return (this.images ? this.images.length : 0) + (this.videos ? this.videos.length : 0) > 1 ;
+  },
+  embed: function() {
+    if (!embeds.get(this)) {
+      var url = this;
+      HTTP.get('http://noembed.com/embed?nowrap=on&url=' + encodeURIComponent(url), function(error, result) {
+        if (!error && result.data) {
+          embeds.set(url, result.data);
+        }
+      });
+    }
+    return embeds.get(this);
   }
 });
 
@@ -12,8 +25,10 @@ Template.gallery.rendered = function() {
 
   // Set up observation, so gallery will be automatically reinitialized if images change
   this.autorun(function() {
-    // Establish dependency on gallery images
-    var images = Template.currentData();
+    // Establish dependency on gallery data
+    var data = Template.currentData();
+
+    var slideCount = (data.images ? data.images.length : 0) + (data.videos ? data.videos.length : 0);
 
     // Un-slick sliders if they have already been slicked
     if ($gallery.find('.selected-image')[0] && $gallery.find('.selected-image')[0].slick) $gallery.find('.selected-image').slick('unslick');
@@ -28,11 +43,12 @@ Template.gallery.rendered = function() {
        arrows: false,
        asNavFor: '.thumbnails'
       });
+      var thumbnailsToShow = 5;
       $gallery.find('.thumbnails').slick({
-       slidesToShow: 5,
+       slidesToShow: thumbnailsToShow,
        slidesToScroll: 1,
        infinite: false,
-       centerMode: true,
+       centerMode: slideCount > thumbnailsToShow,
        focusOnSelect: true,
        swipeToSlide: true,
        asNavFor: '.selected-image'

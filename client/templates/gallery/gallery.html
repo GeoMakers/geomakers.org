@@ -1,17 +1,41 @@
 <template name="gallery">
   <div class="gallery">
     <div class="selected-image">
-      {{#each this}}
+      {{#each images}}
         <a href="{{url}}" class="swipebox">
-          <img data-lazy="{{url}}" alt="Image {{index}}" class="img-responsive">
+          <div class="embed-responsive embed-responsive-16by9">
+            <div class="embed-responsive-item">
+              <img data-lazy="{{url}}" alt="Image {{imageIndex}}">
+            </div>
+          </div>
+        </a>
+      {{/each}}
+      {{#each videos}}
+        <a href="{{this}}" class="swipebox" target="_blank">
+          {{#if embed.html}}
+            <div class="embed-responsive embed-responsive-16by9">
+              {{{embed.html}}}
+            </div>
+          {{else}}
+            {{this}}
+          {{/if}}
         </a>
       {{/each}}
     </div>
-    {{#if hasMultipleImages}}
+    {{#if hasMultiple}}
       <div class="thumbnails">
-        {{#each this}}
+        {{#each images}}
           <div>
-            <img data-lazy="{{url}}" alt="Image {{index}}" class="img-responsive">
+            <img data-lazy="{{url}}" alt="Image {{imageIndex}}" class="img-responsive">
+          </div>
+        {{/each}}
+        {{#each videos}}
+          <div>
+            {{#if embed.thumbnail_url}}
+              <img src="{{embed.thumbnail_url}}" alt="{{embed.title}}" class="img-responsive">
+            {{else}}
+              <i class="fa fa-video-camera fa-2x"></i>
+            {{/if}}
           </div>
         {{/each}}
       </div>

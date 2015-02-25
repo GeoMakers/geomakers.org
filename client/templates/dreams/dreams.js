@@ -12,5 +12,8 @@ Template.dreamsList.helpers({
 });
 
 Template.dream.helpers({
-  author: getAuthor
+  author: getAuthor,
+  imagesOrVideos: function() {
+    return this.images || this.videos;
+  }
 });

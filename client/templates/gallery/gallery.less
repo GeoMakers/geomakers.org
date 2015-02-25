@@ -6,13 +6,25 @@
 .gallery {
   background: @gallery-background;
   margin-bottom: @line-height-computed / 2;
+  .selected-image {
+    text-align: center;
+    img {
+      display: inline;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
   .thumbnails {
     border: 1px solid @gallery-background;
-    img {
+    .slick-slide {
+      text-align: center;
       border: 1px solid @gallery-background;
-    }
-    .slick-center img {
-      border-color: @body-bg;
+      &.slick-center {
+        border-color: @body-bg;
+      }
+      .fa {
+        line-height: 200%;
+      }
     }
     .slick-prev {
       left: @gallery-arrow-padding;
