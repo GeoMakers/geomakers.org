@@ -34,6 +34,7 @@ Template.gallery.rendered = function() {
        infinite: false,
        centerMode: true,
        focusOnSelect: true,
+       swipeToSlide: true,
        asNavFor: '.selected-image'
       });
     });
