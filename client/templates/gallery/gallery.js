@@ -37,21 +37,21 @@ Template.gallery.rendered = function() {
     // Schedule slider initialization after DOM has been updated
     Tracker.afterFlush(function() {
       $gallery.find('.selected-image').slick({
-       slidesToShow: 1,
-       slidesToScroll: 1,
-       infinite: false,
-       arrows: false,
-       asNavFor: '.thumbnails'
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: false,
+        asNavFor: '.thumbnails'
       });
       var thumbnailsToShow = 5;
       $gallery.find('.thumbnails').slick({
-       slidesToShow: thumbnailsToShow,
-       slidesToScroll: 1,
-       infinite: false,
-       centerMode: slideCount > thumbnailsToShow,
-       focusOnSelect: true,
-       swipeToSlide: true,
-       asNavFor: '.selected-image'
+        slidesToShow: thumbnailsToShow,
+        slidesToScroll: 1,
+        infinite: false,
+        centerMode: slideCount > thumbnailsToShow,
+        focusOnSelect: true,
+        swipeToSlide: true,
+        asNavFor: '.selected-image'
       });
     });
   });
