@@ -58,13 +58,14 @@
   </div>
   <div class="information">
     <div>
-      <h2>MakerSpaces</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus incidunt, quae voluptatem. Possimus sunt tempore excepturi eveniet iure, eos tempora exercitationem deleniti error, velit dolores eius in consequatur quia, inventore.</p>
-      <p><a href="{{pathFor 'makerspaces'}}">Find a MakerSpace near you</a></p>
+      <h2>{{dict 'frontPageMakerSpacesHeading' 'MakerSpaces'}}</h2>
+      {{{dict 'frontPageMakerSpacesBody'}}}
+      <p><a href="{{pathFor 'makerspaces'}}">{{dict 'frontPageMakerSpacesLinkText' 'Find a MakerSpace near you'}}</a></p>
     </div>
     <div>
-      <h2>Maker Resources</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit consectetur exercitationem hic, labore. Fugit in qui dolor tempora neque id quis non veritatis, nam aperiam, reprehenderit voluptatibus dolorum officiis, libero.</p>
+      <h2>{{dict 'frontPageMakerResourcesHeading' 'Maker Resources'}}</h2>
+      {{{dict 'frontPageMakerResourcesBody'}}}
+      <p><a href="{{pathFor 'contentPage' slug='maker-resources'}}">{{dict 'frontPageMakerResourcesLinkText' 'Browse our Maker Resources'}}</a></p>
     </div>
   </div>
   <div class="donate">
