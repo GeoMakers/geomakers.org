@@ -1,6 +1,8 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
 @import "/client/templates/app/app.mixins.import.less";
 
+@screen-sm-min-jumbotron-font-size-h1: @font-size-base * 3.6;
+
 .front-page {
   .page-header {
     padding: 0;
@@ -15,7 +17,17 @@
         }
         // Scale jumbotron heading size down a tad
         @media (min-width: @screen-sm-min) {
-          font-size: (@font-size-base * 3.6);
+          font-size: @screen-sm-min-jumbotron-font-size-h1;
+        }
+        svg {
+          height: @font-size-h1 * 0.75;
+          @media (min-width: @screen-sm-min) {
+            height: @screen-sm-min-jumbotron-font-size-h1 * 0.75;
+          }
+          path {
+            fill: #fff;
+            stroke: #fff;
+          }
         }
       }
     }

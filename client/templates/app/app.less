@@ -5,6 +5,20 @@
   padding-top: @navbar-margin-bottom;
 }
 
+svg {
+  path {
+    stroke-opacity: 0;
+    fill-opacity: 1;
+    transition: stroke-opacity 1s, fill-opacity 1s;
+  }
+  &.drawing {
+    path {
+      stroke-opacity: 1;
+      fill-opacity: 0;
+    }
+  }
+}
+
 // Orion overrides
 #orion-admin .form-control.selectize-control, #orion-admin .form-control.selectize-dropdown {
   height: auto;
