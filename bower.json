@@ -1,0 +1,7 @@
+{
+  "name": "geomakers.org",
+  "homepage": "https://github.com/GeoMakers/geomakers.org",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {}
+}
