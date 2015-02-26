@@ -51,7 +51,22 @@ footer {
       svg {
         height: @line-height-computed;
         path {
+          stroke: @navbar-inverse-color;
+          stroke-opacity: 0;
           fill: @navbar-inverse-color;
+        }
+        &.drawing {
+          path {
+            stroke-opacity: 1;
+            fill-opacity: 0;
+          }
+        }
+        &.drawn {
+          path {
+            stroke-opacity: 0;
+            fill-opacity: 1;
+            transition: stroke-opacity 1s, fill-opacity 1s;
+          }
         }
       }
     }

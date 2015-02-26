@@ -3,5 +3,7 @@
   "homepage": "https://github.com/GeoMakers/geomakers.org",
   "license": "Apache-2.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vivus": "~0.1.2"
+  }
 }
