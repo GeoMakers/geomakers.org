@@ -37,16 +37,8 @@ Template.makerspaces.rendered = function () {
         var geoJsonLayer = L.geoJson(data, {
           pointToLayer: function(feature, latlng) {
             return L.marker(latlng, {
-              icon: L.icon({
-                iconUrl: '/img/marker.png',
-                iconRetinaUrl: '/img/marker@2x.png',
-                iconSize: [26, 34],
-                iconAnchor: [13, 34],
-                popupAnchor: [0, -29],
-                shadowUrl: '/img/marker-shadow.png',
-                shadowRetinaUrl: '/img/marker-shadow@2x.png',
-                shadowSize: [15, 2],
-                shadowAnchor: [7, -1]
+              icon: L.mapbox.marker.icon({
+                'marker-color': '#f05a28'
               })
             });
           },
