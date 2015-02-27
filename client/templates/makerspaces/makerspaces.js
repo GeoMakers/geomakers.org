@@ -7,6 +7,7 @@ Template.makerspaces.rendered = function () {
     if (Mapbox.loaded()) {
       L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VvbWFrZXJzIiwiYSI6InFIaHRZTmMifQ.ERh8NkXAzKXonjP8s2TarQ';
       var map = L.mapbox.map('map', 'geomakers.l2i93ia9', {
+        tileLayer: false, // Disable built-in Mapbox tile layer (we load tiles from CartoDB)
         featureLayer: false, // Disable built-in Mapbox feature layer (we load features our own GeoJSON)
         maxZoom: 18,
         center: [37.35, -96.88],
@@ -25,6 +26,11 @@ Template.makerspaces.rendered = function () {
 
       // Add fullscreen control
       L.control.fullscreen({position: 'bottomleft'}).addTo(map);
+
+      L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{retina}.png', {
+        retina: window.devicePixelRatio > 1 ? '@2x' : '',
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+      }).addTo(map);
 
       // Load map markers from GeoJSON
       $.getJSON('/data/makerspaces.geojson', function(data) {
