@@ -4,9 +4,15 @@
       <h1>{{title}}</h1>
     </div>
   {{/contentFor}}
-
+  <a href="{{pathFor 'newDream'}}" class="add media">
+    <div class="media-left media-middle">
+      <i class="fa fa-plus-circle media-object"></i>
+    </div>
+    <div class="media-body media-middle">
+      Share your dream
+    </div>
+  </a>
   {{> dreamsList}}
-
   {{#contentFor 'aside'}}
   {{/contentFor}}
 </template>
