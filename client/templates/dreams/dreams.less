@@ -17,11 +17,18 @@ ul.dreams.media-list {
         & > div {
           .make-row(@gutter: @dream-content-gutter);
           & > .img {
-            .make-sm-column(2, @gutter: @dream-content-gutter);
+            img {
+              .img-responsive();
+              margin-bottom: @line-height-computed / 2;
+              @media (max-width: @screen-md-min) {
+                max-height: 10 * @line-height-computed;
+              }
+            }
+            .make-md-column(4, @gutter: @dream-content-gutter);
           }
           & > .text {
-            .make-sm-column(10, @gutter: @dream-content-gutter);
-            @media (min-width: @screen-sm-min) {
+            .make-md-column(8, @gutter: @dream-content-gutter);
+            @media (min-width: @screen-md-min) {
               h2 {
                 margin-top: 0;
               }
