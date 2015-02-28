@@ -8,6 +8,9 @@
     .jumbotron {
       background: lighten(@brand-primary, 5%);
       color: #fff;
+      @media (min-width: @screen-lg-min) {
+        padding: (@jumbotron-padding * 3) 0 (@jumbotron-padding * 2);
+      }
       h1 {
         // On large screens, jumbotron content is in two columns and the heading must top align with the other column
         @media (min-width: @screen-lg-min) {
