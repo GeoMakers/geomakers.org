@@ -15,13 +15,19 @@
           {{> yield}}
         </article>
         {{#if hasRegion 'aside'}}
-          <aside class="col-sm-4">
-            {{> ad}}
-            {{> yield 'aside'}}
-          </aside>
+          {{> aside}}
         {{/if}}
       </div>
     </div>
   </main>
   {{> footer}}
+</template>
+
+<template name="aside">
+  <aside class="col-sm-4">
+    {{> ad}}
+    <div class="aside-content">
+      {{> yield 'aside'}}
+    </div>
+  </aside>
 </template>
