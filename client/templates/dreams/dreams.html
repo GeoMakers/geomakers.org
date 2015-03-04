@@ -34,16 +34,14 @@
             <small>{{livestamp createdAt}}</small>
           </h3>
           <a href="{{pathFor 'dream'}}">
-            <div>
-              {{#if image}}
-                <div class="img">
-                  <img src="{{image.url}}" alt="Image for {{title}}">
-                </div>
-              {{/if}}
-              <div class="text">
-                <h2>{{title}}</h2>
-                <p>{{preview body length=200}}</p>
+            {{#if image}}
+              <div class="img">
+                <img src="{{image.url}}" alt="Image for {{title}}">
               </div>
+            {{/if}}
+            <div class="text">
+              <h2>{{title}}</h2>
+              <p>{{preview body length=200}}</p>
             </div>
           </a>
         </div>

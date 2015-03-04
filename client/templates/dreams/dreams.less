@@ -14,25 +14,23 @@ ul.dreams.media-list {
         font-size: @font-size-h3;
       }
       & > a {
-        & > div {
-          .make-row(@gutter: @dream-content-gutter);
-          & > .img {
-            img {
-              .img-responsive();
-              margin-bottom: @line-height-computed / 2;
-              @media (max-width: @screen-md-min) {
-                max-height: 10 * @line-height-computed;
-              }
+        display: block;
+        .make-row(@gutter: @dream-content-gutter);
+        .clearfix();
+        & > .img {
+          img {
+            .img-responsive();
+            margin-bottom: @line-height-computed / 2;
+            @media (max-width: @screen-md-min) {
+              max-height: 10 * @line-height-computed;
             }
-            .make-md-column(4, @gutter: @dream-content-gutter);
           }
-          & > .text {
-            .make-md-column(8, @gutter: @dream-content-gutter);
-            @media (min-width: @screen-md-min) {
-              h2 {
-                margin-top: 0;
-              }
-            }
+          .make-md-column(4, @gutter: @dream-content-gutter);
+        }
+        & > .text {
+          .make-md-column(8, @gutter: @dream-content-gutter);
+          h2 {
+            margin-top: 0;
           }
         }
         p {
