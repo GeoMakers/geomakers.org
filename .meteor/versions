@@ -79,7 +79,7 @@ orionjs:file-attribute@0.0.3
 orionjs:filesystem@0.0.13
 orionjs:s3@0.0.10
 orionjs:styles@0.1.3
-orionjs:summernote@0.2.4
+orionjs:summernote@0.2.6
 pauloborges:mapbox@2.1.4_3
 random@1.0.2
 reactive-dict@1.0.5
