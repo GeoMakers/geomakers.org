@@ -73,6 +73,7 @@ nemo64:bootstrap@3.3.1_1
 nemo64:bootstrap-data@3.3.1_1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
+obvio171:disqus@1.0.0
 ordered-dict@1.0.2
 orionjs:core@0.4.8
 orionjs:file-attribute@0.0.3
