@@ -40,5 +40,11 @@
         <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
       {{/each}}
     {{/if}}
+    {{#if currentUserIsAuthor}}
+      <h2>Actions</h2>
+      <ul class="list-unstyled">
+        <li><a href="{{pathFor 'editDream'}}"><i class="fa fa-pencil fa-fw"></i>Edit</a></li>
+      </ul>
+    {{/if}}
   {{/contentFor}}
 </template>
