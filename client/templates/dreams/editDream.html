@@ -1,4 +1,7 @@
 <template name="editDream">
+  {{#contentFor 'header'}}
+    {{> dreamHeader}}
+  {{/contentFor}}
   {{#autoForm collection='orion.entities.dreams.collection' doc=this id='editDreamForm' type='update' class='form-horizontal'}}
     {{> dreamForm}}
   {{/autoForm}}

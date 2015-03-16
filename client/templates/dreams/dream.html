@@ -1,17 +1,6 @@
 <template name="dream">
   {{#contentFor 'header'}}
-    <div class="container">
-      <h1>{{title}}</h1>
-      <p>
-        {{#with author}}
-          <a href="{{pathFor 'user'}}">
-            {{> avatar user=this}}
-            <span class="name">{{profile.name}}</span>
-          </a>
-        {{/with}}
-        <small>{{date createdAt}}</small>
-      </p>
-    </div>
+    {{> dreamHeader}}
   {{/contentFor}}
 
   {{#if imagesOrVideos}}
@@ -47,4 +36,19 @@
       </ul>
     {{/if}}
   {{/contentFor}}
+</template>
+
+<template name="dreamHeader">
+  <div class="container">
+    <h1>{{title}}</h1>
+    <p>
+      {{#with author}}
+        <a href="{{pathFor 'user'}}">
+          {{> avatar user=this}}
+          <span class="name">{{profile.name}}</span>
+        </a>
+      {{/with}}
+      <small>{{date createdAt}}</small>
+    </p>
+  </div>
 </template>
