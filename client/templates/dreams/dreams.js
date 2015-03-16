@@ -12,11 +12,14 @@ Template.dreamsList.helpers({
 });
 
 Template.dream.helpers({
-  author: getAuthor,
   currentUserIsAuthor: function() {
     return this.createdBy === Meteor.userId();
   },
   imagesOrVideos: function() {
     return this.images || this.videos;
   }
+});
+
+Template.dreamHeader.helpers({
+  author: getAuthor
 });
