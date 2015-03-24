@@ -8,6 +8,12 @@ Template.dreamsList.helpers({
     if (this.images && this.images.length > 0) {
       return this.images[0];
     }
+  },
+  moreResults: function() {
+    return this.dreams.limit < this.dreams.collection.find().count();
+  },
+  nextLimit: function() {
+    return this.dreams.limit + Config.pageSize;
   }
 });
 
