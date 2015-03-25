@@ -10,14 +10,21 @@
 
   {{{profile.body}}}
 
-  {{#contentFor 'aside'}}
-    {{#if dreams}}
+  {{>contentFor region='aside' template="userAside"}}
+</template>
+
+<template name="userAside">
+  {{#if dreams}}
+    <div class="dreams">
       <h2>Dreams</h2>
-      <ul>
-        {{#each dreams}}
+      <ul class="list-unstyled">
+        {{#each getDreams}}
           <li><a href="{{pathFor 'dream'}}">{{title}}</a></li>
         {{/each}}
       </ul>
-    {{/if}}
-  {{/contentFor}}
+      {{#if hasMoreDreams}}
+        <button class="btn btn-default btn-xs show-all"><i class="fa fa-chevron-circle-down"></i> Show all</button>
+      {{/if}}
+    </div>
+  {{/if}}
 </template>
