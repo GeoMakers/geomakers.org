@@ -1,11 +1,8 @@
 var embeds = new ReactiveDict();
 
 Template.gallery.helpers({
-  imageIndex: function() {
-    return Template.parentData().images.indexOf(this) + 1;
-  },
   hasMultiple: function() {
-    return (this.images ? this.images.length : 0) + (this.videos ? this.videos.length : 0) > 1 ;
+    return (this.imageIds ? this.imageIds.length : 0) + (this.videos ? this.videos.length : 0) > 1 ;
   },
   embed: function() {
     if (!embeds.get(this)) {
@@ -28,7 +25,7 @@ Template.gallery.rendered = function() {
     // Establish dependency on gallery data
     var data = Template.currentData();
 
-    var slideCount = (data.images ? data.images.length : 0) + (data.videos ? data.videos.length : 0);
+    var slideCount = (data.imageIds ? data.imageIds.length : 0) + (data.videos ? data.videos.length : 0);
 
     // Un-slick sliders if they have already been slicked
     if ($gallery.find('.selected-image')[0] && $gallery.find('.selected-image')[0].slick) $gallery.find('.selected-image').slick('unslick');

@@ -33,3 +33,8 @@ http
 reactive-dict
 mquandalle:bower
 obvio171:disqus
+cfs:standard-packages
+cfs:filesystem
+cfs:s3
+cfs:graphicsmagick
+yogiben:autoform-file

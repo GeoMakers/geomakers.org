@@ -2,10 +2,10 @@
   <div class="gallery">
     <div class="selected-image">
       {{#each images}}
-        <a href="{{url}}" class="swipebox">
+        <a href="{{url store='originals'}}" class="swipebox">
           <div class="embed-responsive embed-responsive-16by9">
             <div class="embed-responsive-item">
-              <img data-lazy="{{url}}" alt="Image {{imageIndex}}">
+              <img data-lazy="{{url store='originals'}}" alt="{{original.name}}">
             </div>
           </div>
         </a>
@@ -26,7 +26,7 @@
       <div class="thumbnails">
         {{#each images}}
           <div>
-            <img data-lazy="{{url}}" alt="Image {{imageIndex}}" class="img-responsive">
+            <img data-lazy="{{url store='thumbnails'}}" alt="{{original.name}}" class="img-responsive">
           </div>
         {{/each}}
         {{#each videos}}
