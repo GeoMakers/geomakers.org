@@ -6,6 +6,7 @@
 
 meteor-platform
 orionjs:core
+orionjs:bootstrap
 orionjs:styles
 orionjs:summernote@0.2.4
 manuelschoebel:ms-seo
