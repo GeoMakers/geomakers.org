@@ -34,7 +34,7 @@ reactive-dict
 mquandalle:bower
 obvio171:disqus
 cfs:standard-packages
-cfs:filesystem
+cfs:gridfs
 cfs:s3
 cfs:graphicsmagick
 yogiben:autoform-file
