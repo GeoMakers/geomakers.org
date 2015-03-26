@@ -26,13 +26,13 @@
       <div class="thumbnails">
         {{#each images}}
           <div>
-            <img data-lazy="{{url store='thumbnails'}}" alt="{{original.name}}" class="img-responsive">
+            <img data-lazy="{{url store='thumbnails'}}" alt="{{original.name}}">
           </div>
         {{/each}}
         {{#each videos}}
           <div>
             {{#if embed.thumbnail_url}}
-              <img src="{{embed.thumbnail_url}}" alt="{{embed.title}}" class="img-responsive">
+              <img src="{{embed.thumbnail_url}}" alt="{{embed.title}}">
             {{else}}
               <i class="fa fa-video-camera fa-2x"></i>
             {{/if}}

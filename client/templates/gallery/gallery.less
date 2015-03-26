@@ -5,7 +5,7 @@
 
 .gallery {
   background: @gallery-background;
-  margin-bottom: @line-height-computed / 2;
+  margin-bottom: @line-height-computed;
   .selected-image {
     text-align: center;
     img {
@@ -16,11 +16,15 @@
   }
   .thumbnails {
     border: 1px solid @gallery-background;
+    img {
+      height: 50px;
+    }
     .slick-slide {
       text-align: center;
       border: 1px solid @gallery-background;
-      &.slick-center {
-        border-color: @body-bg;
+      overflow: hidden;
+      img {
+        display: inline;
       }
       .fa {
         line-height: 200%;
