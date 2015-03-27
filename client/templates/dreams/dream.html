@@ -6,12 +6,14 @@
   {{#if imagesOrVideos}}
     {{> gallery images=images videos=videos}}
   {{/if}}
+  
   {{{body}}}
+
   {{#if links}}
     <h2>Links</h2>
-    <ul class="list-unstyled">
+    <ul class="fa-ul">
       {{#each links}}
-        <li><a href="{{this}}" target="_blank">{{this}}</a></li>
+        <li><a href="{{this}}" target="_blank"><i class="fa-li fa fa-link"></i>{{this}}</a></li>
       {{/each}}
     </ul>
   {{/if}}
