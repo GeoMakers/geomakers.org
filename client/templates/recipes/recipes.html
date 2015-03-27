@@ -1,0 +1,29 @@
+<template name="recipes">
+  {{#contentFor 'header'}}
+    <div class="container">
+      <h1>{{title}}</h1>
+    </div>
+  {{/contentFor}}
+  {{> recipesBoard}}
+</template>
+
+<template name="recipesBoard">
+  <div class="recipesBoard">
+    {{#each recipes}}
+      <div class="recipe">
+        <div class="thumbnail">
+          <a href="{{pathFor 'recipe'}}">
+            {{#if image}}
+              <img src="{{image.url store='thumbnails-large'}}" alt="Image for {{title}}">
+            {{/if}}
+            <div class="caption">
+              <h2>{{title}}</h2>
+              <h3>{{author.profile.name}}</h3>
+              <p>{{preview body}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</template>

@@ -9,3 +9,13 @@ Template.registerHelper('preview', function(value, options) {
 Template.registerHelper('date', function(date) {
   return moment(date).format('lll');
 });
+
+Template.registerHelper('author', function() {
+  return Meteor.users.findOne(this.createdBy);
+});
+
+Template.registerHelper('image', function() {
+  if (this.imageIds && this.imageIds.length > 0) {
+    return Images.findOne({_id: this.imageIds[0]});
+  }
+});
