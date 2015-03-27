@@ -1,5 +1,11 @@
 @import "/client/lib/bootstrap/custom.bootstrap.import.less";
 
+.recipes, .recipe, .newRecipe, .editRecipe {
+  .page-header {
+    background: lighten(@brand-make, 5%);
+  }
+}
+
 .recipesBoard {
   .make-row();
   .recipe {
@@ -34,5 +40,16 @@
         }
       }
     }
+  }
+}
+
+.recipe ol.steps li {
+  padding-bottom: @line-height-computed / 2;
+  border-bottom: 1px solid @gray-lighter;
+  font-size: @font-size-h3;
+  line-height: @headings-line-height;
+  .body {
+    font-size: @font-size-base;
+    line-height: @line-height-base;
   }
 }

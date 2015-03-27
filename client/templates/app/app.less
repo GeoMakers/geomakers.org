@@ -5,6 +5,22 @@
   padding-top: @navbar-margin-bottom;
 }
 
+.dreams, .dream, .newDream, .editDream,
+.recipes, .recipe, .newRecipe, .editRecipe {
+  .page-header {
+    color: #fff;
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+        & > .name {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
 main article .comments {
   margin-top: @line-height-computed;
 }

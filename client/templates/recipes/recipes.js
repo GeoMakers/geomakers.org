@@ -1,3 +1,11 @@
+Template.recipe.helpers({
+  files: function() {
+    if (this.fileIds) {
+      return Attachments.find({_id: {$in: this.fileIds}});
+    }
+  }
+});
+
 Template.recipesBoard.onRendered(function() {
   var boardNode = this.firstNode;
 
