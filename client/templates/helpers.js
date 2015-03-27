@@ -16,6 +16,31 @@ Template.registerHelper('date', function(date) {
   return moment(date).format('lll');
 });
 
+Template.registerHelper('fileIcon', function() {
+  var icon = 'file-o';
+  if (this && this.original.type) {
+    var type = this.original.type;
+    if (type.indexOf('pdf') > -1) {
+      icon = 'file-pdf-o';
+    } else if (type.indexOf('msword') > -1 || type.indexOf('officedocument.wordprocessingml.document') > -1) {
+      icon = 'file-word-o';
+    } else if (type.indexOf('mspowerpoint') > -1 || type.indexOf('officedocument.presentationml.presentation') > -1) {
+      icon = 'file-powerpoint-o';
+    } else if (type.indexOf('ms-excel') > -1 || type.indexOf('officedocument.spreadsheetml.sheet') > -1) {
+      icon = 'file-excel-o';
+    } else if (type.indexOf('zip') > -1) {
+      icon = 'file-archive-o';
+    } else if (this.isImage()) {
+      icon = 'file-image-o';
+    } else if (this.isVideo()) {
+      icon = 'file-movie-o';
+    } else if (this.isAudio()) {
+      icon = 'file-audio-o';
+    }
+  }
+  return icon;
+});
+
 Template.registerHelper('author', function() {
   return Meteor.users.findOne(this.createdBy);
 });
