@@ -1,0 +1,34 @@
+@import "/client/lib/bootstrap/custom.bootstrap.import.less";
+
+.form-group {
+  .list-group {
+    padding-left: 0;
+    list-style: none;
+    .list-group-item {
+      margin-bottom: 0.5em;
+      .media {
+        display: table-row;
+        .media-right {
+          margin-right: 0;
+          color: @text-color;
+          .fa {
+            font-size: 80%;
+          }
+        }
+        .media-body {
+          width: 100%;
+          .form-group {
+            margin-bottom: 0;
+          }
+          .help-block.new-item {
+            margin: 6px 0 6px;
+            font-size: 16px;
+          }
+        }
+      }
+      .control-label {
+        display: none;
+      }
+    }
+  }
+}

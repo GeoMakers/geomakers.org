@@ -1,0 +1,67 @@
+<!-- Based on https://github.com/aldeed/meteor-autoform/blob/v4.2.2/templates/bootstrap3-horizontal/bootstrap3-horizontal.html#L21  -->
+<template name="afFormGroup_bootstrap3-horizontal-geomakers">
+  <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+    {{#if skipLabel}}
+    {{! We include the empty label as the easiest way to keep proper field alignment}}
+    <label {{afFieldLabelAtts}}></label>
+    {{else}}
+    <label {{afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+    {{/if}}
+    <div class="{{rightColumnClass}}">
+      {{> afFieldInput afFieldInputAtts}}
+      {{#if afFieldIsInvalid name=this.atts.name}}
+        <span class="help-block">
+          {{{afFieldMessage name=this.atts.name}}}
+        </span>
+      {{else}}
+        {{#if help}}
+          <span class="help-block">
+            {{{help}}}
+          </span>
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+</template>
+
+<!-- Based on https://github.com/aldeed/meteor-autoform/blob/v4.2.2/templates/bootstrap3-horizontal/bootstrap3-horizontal.html#L50 -->
+<template name="afArrayField_bootstrap3-horizontal-geomakers">
+  <div class="form-group{{#if afFieldIsInvalid name=this.atts.name}} has-error{{/if}}">
+    <label {{afFieldLabelAtts}}>{{afFieldLabelText name=this.atts.name}}</label>
+    <div class="{{rightColumnClass}}">
+      <div class="panel panel-default autoform-padding-fix">
+        {{#if afFieldIsInvalid name=this.atts.name}}
+        <div class="panel-body has-error">
+          <span class="help-block">{{{afFieldMessage name=this.atts.name}}}</span>
+        </div>
+        {{/if}}
+        <ul class="list-group">
+          {{#afEachArrayItem name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
+          <li class="list-group-item autoform-array-item">
+            <div class="list-group-item-content">
+              <div class="media">
+                <div class="media-body">
+                  {{> afQuickField name=this.name label=false}}
+                </div>
+                {{#if afArrayFieldHasMoreThanMinimum name=../atts.name minCount=../atts.minCount maxCount=../atts.maxCount}}
+                <button type="button" class="btn btn-link autoform-remove-item media-right"><span class="fa fa-minus"></span></button>
+                {{/if}}
+              </div>
+            </div>
+          </li>
+          {{/afEachArrayItem}}
+          {{#if afArrayFieldHasLessThanMaximum name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
+          <li class="list-group-item">
+            <div class="media">
+              <div class="media-body">
+                <span class="help-block new-item">{{{this.atts.help}}}</span>
+              </div>
+              <button type="button" class="btn btn-link autoform-add-item media-right" data-autoform-field="{{this.atts.name}}" data-autoform-minCount="{{this.atts.minCount}}" data-autoform-maxCount="{{this.atts.maxCount}}"><span class="fa fa-plus"></span></button>
+            </div>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

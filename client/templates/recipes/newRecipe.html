@@ -1,0 +1,10 @@
+<template name="newRecipe">
+  {{#contentFor 'header'}}
+    <div class="container">
+      <h1>{{title}}</h1>
+    </div>
+  {{/contentFor}}
+  {{#autoForm collection=collection id='newRecipeForm' type='insert' class='form-horizontal'}}
+    {{> recipeForm}}
+  {{/autoForm}}
+</template>

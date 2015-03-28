@@ -44,13 +44,27 @@
   }
 }
 
-.recipe ol.steps li {
+.recipe .steps li {
   padding-bottom: @line-height-computed / 2;
   border-bottom: 1px solid @gray-lighter;
-  font-size: @font-size-h3;
-  line-height: @headings-line-height;
-  .body {
-    font-size: @font-size-base;
-    line-height: @line-height-base;
+}
+
+.recipe, .editRecipe, .newRecipe {
+  .steps li {
+    font-size: @font-size-h3;
+    line-height: @headings-line-height;
+    .body, .panel-body {
+      font-size: @font-size-base;
+      line-height: @line-height-base;
+    }
+    &.autoform-array-item {
+      border: none;
+      list-style-type: decimal;
+      margin-left: 30px;
+      .list-group-item-content {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
   }
 }
