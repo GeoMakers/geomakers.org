@@ -1,23 +1,23 @@
-var dreamsCount = 0;
-var initialDreamsLimit = 5;
+var itemsCount = 0;
+var initialItemsLimit = 5;
 
-Template.userAside.created = function() {
-  dreamsCount = Template.currentData().dreams.count();
+Template.userContent.created = function() {
+  this.showAll = new ReactiveVar(false);
+  this.itemsCount = Template.currentData().items.count();
 }
 
-Template.userAside.helpers({
-  getDreams: function() {
-    this.dreams.limit = Iron.controller().state.get('showAllDreams') ? 0 : initialDreamsLimit;
-    return this.dreams.fetch();
+Template.userContent.helpers({
+  getItems: function(cursor) {
+    cursor.limit = Template.instance().showAll.get() ? 0 : initialItemsLimit;
+    return cursor.fetch();
   },
-  hasMoreDreams: function() {
-    var controller = Iron.controller();
-    return !Iron.controller().state.get('showAllDreams') && dreamsCount > initialDreamsLimit;
+  hasMoreItems: function() {
+    return !Template.instance().showAll.get() && Template.instance().itemsCount > initialItemsLimit;
   }
 });
 
-Template.userAside.events({
-  'click .dreams .show-all': function() {
-    Iron.controller().state.set('showAllDreams', true);
+Template.userContent.events({
+  'click .show-all': function(e, template) {
+    template.showAll.set(true);
   }
 });

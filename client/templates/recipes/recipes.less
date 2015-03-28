@@ -28,18 +28,27 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
         margin-top: -5px;
       }
-    }
-    a {
-      h2 {
-        color: @brand-make;
-      }
-      &:hover {
-        text-decoration: none;
+      a {
         h2 {
-          text-decoration: underline;
-          color: darken(@brand-make, 15%);
+          color: @brand-make;
+        }
+        &:hover {
+          text-decoration: none;
+          h2 {
+            text-decoration: underline;
+            color: darken(@brand-make, 15%);
+          }
         }
       }
+    }
+  }
+}
+
+.recipes {
+  a {
+    color: @brand-make;
+    &:hover {
+      color: darken(@brand-make, 15%);
     }
   }
 }
