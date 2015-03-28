@@ -31,17 +31,21 @@
     }
     a {
       h2 {
-        color: @link-color;
+        color: @brand-make;
       }
       &:hover {
         text-decoration: none;
         h2 {
           text-decoration: underline;
-          color: @link-hover-color;
+          color: darken(@brand-make, 15%);
         }
       }
     }
   }
+}
+
+.recipes .add h2 {
+  margin: 0;
 }
 
 .recipe .steps li {

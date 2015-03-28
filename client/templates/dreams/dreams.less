@@ -57,7 +57,15 @@ ul.dreams.media-list {
   }
 }
 
-.dreams .add {
-  padding-bottom: @line-height-computed;
-  border-bottom: 1px solid @gray-lighter;
+.dreams {
+  a {
+    color: @brand-dream;
+    &:hover {
+      color: darken(@brand-dream, 15%);
+    }
+  }
+  .add {
+    padding-bottom: @line-height-computed;
+    border-bottom: 1px solid @gray-lighter;
+  }
 }
