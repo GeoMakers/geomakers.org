@@ -11,6 +11,9 @@ Template.userContent.helpers({
     cursor.limit = Template.instance().showAll.get() ? 0 : initialItemsLimit;
     return cursor.fetch();
   },
+  hasItems : function() {
+    return Template.instance().itemsCount > 0;
+  },
   hasMoreItems: function() {
     return !Template.instance().showAll.get() && Template.instance().itemsCount > initialItemsLimit;
   }

@@ -11,28 +11,23 @@
   {{{profile.body}}}
 
   {{#contentFor 'aside'}}
-    {{#if dreams}}
-      <div class="dreams">
-        <h2>Dreams</h2>
-        {{> userContent items=dreams itemRoute='dream'}}
-      </div>
-    {{/if}}
-    {{#if recipes}}
-      <div class="recipes">
-        <h2>Recipes</h2>
-        {{> userContent items=recipes itemRoute='recipe'}}
-      </div>
-    {{/if}}
+    {{> userContent items=dreams itemRoute='dream' title='Dreams' class='dreams'}}
+    {{> userContent items=recipes itemRoute='recipe' title='Recipes' class="recipes"}}
   {{/contentFor}}
 </template>
 
 <template name="userContent">
-  <ul class="list-unstyled">
-    {{#each getItems items}}
-      <li><a href="{{pathFor ../itemRoute}}">{{title}}</a></li>
-    {{/each}}
-  </ul>
-  {{#if hasMoreItems}}
-    <button class="btn btn-default btn-xs show-all"><i class="fa fa-chevron-circle-down"></i> Show all</button>
+  {{#if hasItems}}
+    <div class="{{class}}">
+      <h2>Dreams</h2>
+      <ul class="list-unstyled">
+        {{#each getItems items}}
+          <li><a href="{{pathFor ../itemRoute}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
+      {{#if hasMoreItems}}
+        <button class="btn btn-default btn-xs show-all"><i class="fa fa-chevron-circle-down"></i> Show all</button>
+      {{/if}}
+    </div>
   {{/if}}
 </template>
