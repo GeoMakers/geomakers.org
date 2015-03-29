@@ -37,7 +37,8 @@ ul.dreams.media-list {
         p {
           color: @text-color;
         }
-        &:hover {
+        &:hover,
+        &:focus {
           text-decoration: none;
           h2 {
             text-decoration: underline;
@@ -60,7 +61,8 @@ ul.dreams.media-list {
 .dreams {
   a {
     color: @brand-dream;
-    &:hover {
+    &:hover,
+    &:focus {
       color: darken(@brand-dream, 15%);
     }
   }
