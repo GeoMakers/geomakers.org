@@ -4,4 +4,8 @@
     <h2>Dreams</h2>
     {{> dreamsList}}
   {{/if}}
+  {{#if recipes}}
+    <h2>Recipes</h2>
+    {{> recipesBoard recipes=recipes hideNewRecipeLink=true}}
+  {{/if}}
 </template>
