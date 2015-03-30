@@ -13,7 +13,8 @@ Template.activity.rendered = function () {
           featureLayer: false, // Disable built-in Mapbox feature layer (we will add features later)
           maxZoom: 18,
           center: [Template.currentData().location.lat, Template.currentData().location.lng],
-          zoom: 12
+          zoom: 12,
+          scrollWheelZoom: false
         });
 
         // Add fullscreen control
