@@ -12,8 +12,8 @@ Template.registerHelper('linkify', function(value){
   return value.replace(urlRegExp, '<a href="$&" target="_blank">$&</a>');
 });
 
-Template.registerHelper('date', function(date) {
-  return moment(date).format('lll');
+Template.registerHelper('formatDateTime', function(dateTime) {
+  return moment(dateTime).format('lll');
 });
 
 Template.registerHelper('fileIcon', function() {
