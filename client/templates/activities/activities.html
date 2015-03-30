@@ -1,0 +1,12 @@
+<template name="activities">
+  {{#contentFor 'header'}}
+    <div class="container">
+      <h1>{{title}}</h1>
+    </div>
+  {{/contentFor}}
+  <ul>
+    {{#each activities}}
+      <li><a href="{{pathFor 'activity'}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
+</template>

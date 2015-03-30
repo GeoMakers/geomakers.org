@@ -1,0 +1,20 @@
+@import "/client/lib/bootstrap/custom.bootstrap.import.less";
+
+.activities, .activity, .newactivity, .editactivity {
+  .page-header {
+    background: @brand-boost;
+    a {
+      font-style: italic;
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.activity #map {
+  height: @line-height-computed * 15;
+  margin-bottom: @line-height-computed / 2;
+}
