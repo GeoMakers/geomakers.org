@@ -4,9 +4,13 @@
       <h1>{{title}}</h1>
     </div>
   {{/contentFor}}
-  <ul>
-    {{#each activities}}
-      <li><a href="{{pathFor 'activity'}}">{{title}}</a></li>
-    {{/each}}
-  </ul>
+  <a href="{{pathFor 'newActivity'}}" class="add media">
+    <div class="media-left media-middle">
+      <i class="fa fa-plus-circle media-object"></i>
+    </div>
+    <div class="media-body media-middle">
+      Share an activity
+    </div>
+  </a>
+  {{> feed items=activities itemRoute='activity'}}
 </template>

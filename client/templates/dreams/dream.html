@@ -32,13 +32,7 @@
       {{/each}}
     {{/if}}
     <h2>Actions</h2>
-    <ul class="list-inline">
-      <li>
-        <a href="{{pathFor 'recipes' query=getQuery}}" class="btn btn-make" title="Create a new recipe for this dream">
-          <i class="fa fa-wrench"></i> Make
-        </a>
-      </li>
-    </ul>
+    {{> dreamActions}}
     {{#if currentUserIsAuthor}}
       <ul class="list-unstyled">
         <li><a href="{{pathFor 'editDream'}}"><i class="fa fa-pencil fa-fw"></i>Edit</a></li>
@@ -60,4 +54,14 @@
       <small>{{formatDateTime createdAt}}</small>
     </p>
   </div>
+</template>
+
+<template name="dreamActions">
+  <ul class="actions list-inline">
+    <li>
+      <a href="{{pathFor 'recipes' query=getQuery}}" class="make {{class}}">
+        <i class="fa fa-fw fa-wrench"></i>Make
+      </a>
+    </li>
+  </ul>
 </template>

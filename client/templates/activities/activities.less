@@ -14,6 +14,16 @@
   }
 }
 
+.activities {
+  a:not(.btn) {
+    color: @brand-boost;
+    &:hover,
+    &:focus {
+      color: darken(@brand-boost, 15%);
+    }
+  }
+}
+
 .activity #map {
   height: @line-height-computed * 15;
   margin-bottom: @line-height-computed / 2;

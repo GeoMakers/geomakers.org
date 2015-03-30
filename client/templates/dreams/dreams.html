@@ -12,50 +12,5 @@
       Share your dream
     </div>
   </a>
-  {{> dreamsList}}
-</template>
-
-<template name="dreamsList">
-  <ul class="dreams media-list">
-    {{#each dreams}}
-      <li class="media">
-        <div class="media-left">
-          {{#with author}}
-            <a href="{{pathFor 'user'}}">{{> avatar user=this}}</a>
-          {{/with}}
-        </div>
-        <div class="media-body">
-          <h3>
-            {{#with author}}
-              <a href="{{pathFor 'user'}}">{{profile.name}}</a>
-            {{/with}}
-            <small>{{livestamp createdAt}}</small>
-          </h3>
-          <a href="{{pathFor 'dream'}}" class="{{#if image}}with-image{{/if}}">
-            {{#if image}}
-              <div class="image">
-                <img src="{{image.url store='thumbnails-large'}}" alt="Image for {{title}}">
-              </div>
-            {{/if}}
-            <div class="text">
-              <h2>{{title}}</h2>
-              <p>{{preview body length=300}}</p>
-            </div>
-          </a>
-          <div class="actions">
-            <a href="{{pathFor 'recipes' query=getQuery}}" class="make">
-              <i class="fa fa-wrench"></i>Make
-            </a>
-          </div>
-        </div>
-      </li>
-    {{/each}}
-  </ul>
-  {{#with dreams}}
-    {{#if moreResults}}
-      <div class="text-center">
-        <a class="btn btn-default btn-sm" href="?limit={{nextLimit}}"><i class="fa fa-chevron-circle-down"></i> Load more</a>
-      </div>
-    {{/if}}
-  {{/with}}
+  {{> feed items=dreams itemRoute='dream' class='dreams' actionsTemplate='dreamActions'}}
 </template>
