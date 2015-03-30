@@ -2,6 +2,9 @@
   {{#contentFor 'header'}}
     <div class="container">
       <h1>{{title}}</h1>
+      {{#with dream}}
+        <p class="lead">For the GeoDream <a href="{{pathFor 'dream'}}">{{title}}</a></p>
+      {{/with}}
     </div>
   {{/contentFor}}
   {{#autoForm collection=collection id='newRecipeForm' type='insert' class='form-horizontal'}}

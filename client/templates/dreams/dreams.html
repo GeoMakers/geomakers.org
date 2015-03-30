@@ -44,6 +44,11 @@
               <p>{{preview body length=200}}</p>
             </div>
           </a>
+          <div class="actions">
+            <a href="{{pathFor 'recipes' query=getQuery}}" class="make">
+              <i class="fa fa-wrench"></i>Make
+            </a>
+          </div>
         </div>
       </li>
     {{/each}}

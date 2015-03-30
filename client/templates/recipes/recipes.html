@@ -2,6 +2,9 @@
   {{#contentFor 'header'}}
     <div class="container">
       <h1>{{title}}</h1>
+      {{#with dream}}
+        <p class="lead">For the GeoDream <a href="{{pathFor 'dream'}}">{{title}}</a></p>
+      {{/with}}
     </div>
   {{/contentFor}}
   {{> recipesBoard}}
@@ -11,7 +14,7 @@
   <div class="recipesBoard">
     {{#unless hideNewRecipeLink}}
       <div class="recipe">
-        <a href="{{pathFor 'newRecipe'}}" class="add media">
+        <a href="{{pathFor 'newRecipe' query=getQuery}}" class="add media">
           <h2>
             <div class="media-left media-middle">
               <i class="fa fa-plus-circle media-object"></i>

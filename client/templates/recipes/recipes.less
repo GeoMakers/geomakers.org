@@ -3,6 +3,14 @@
 .recipes, .recipe, .newRecipe, .editRecipe {
   .page-header {
     background: lighten(@brand-make, 5%);
+    a {
+      font-style: italic;
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
   }
 }
 

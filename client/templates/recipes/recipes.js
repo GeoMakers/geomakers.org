@@ -6,6 +6,15 @@ Template.recipe.helpers({
   }
 });
 
+Template.recipesBoard.helpers({
+  getQuery: function() {
+    var query = {};
+    var dream = Template.parentData().dream;
+    if (dream) query.dream = dream._id;
+    return query;
+  }
+});
+
 Template.recipesBoard.onRendered(function() {
   var boardNode = this.firstNode;
   var masonry = new Masonry(boardNode, {
