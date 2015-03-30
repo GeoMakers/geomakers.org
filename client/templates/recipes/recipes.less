@@ -36,29 +36,19 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
         margin-top: -5px;
       }
-      a {
+    }
+    a {
+      h2 {
+        color: @brand-make;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
         h2 {
-          color: @brand-make;
-        }
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          h2 {
-            text-decoration: underline;
-            color: darken(@brand-make, 15%);
-          }
+          text-decoration: underline;
+          color: darken(@brand-make, 15%);
         }
       }
-    }
-  }
-}
-
-.recipes {
-  a {
-    color: @brand-make;
-    &:hover,
-    &:focus {
-      color: darken(@brand-make, 15%);
     }
   }
 }
