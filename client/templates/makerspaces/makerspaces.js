@@ -5,8 +5,8 @@ Meteor.startup(function(){
 Template.makerspaces.rendered = function () {
   this.autorun(function () {
     if (Mapbox.loaded()) {
-      L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VvbWFrZXJzIiwiYSI6InFIaHRZTmMifQ.ERh8NkXAzKXonjP8s2TarQ';
-      var map = L.mapbox.map('map', 'geomakers.l2i93ia9', {
+      L.mapbox.accessToken = Config.mapbox.accessToken;
+      var map = L.mapbox.map('map', Config.mapbox.mapId, {
         tileLayer: false, // Disable built-in Mapbox tile layer (we load tiles from CartoDB)
         featureLayer: false, // Disable built-in Mapbox feature layer (we load features our own GeoJSON)
         maxZoom: 18,
