@@ -42,7 +42,7 @@
             {{/if}}
             <div class="caption">
               <h2>{{title}}</h2>
-              <h3>{{author.profile.name}}</h3>
+              <p class="author">{{> avatar user=author size='extra-small'}} {{author.profile.name}}</p>
               <p>{{preview body}}</p>
             </div>
           </a>
