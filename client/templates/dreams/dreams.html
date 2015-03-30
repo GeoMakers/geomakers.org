@@ -31,15 +31,15 @@
             {{/with}}
             <small>{{livestamp createdAt}}</small>
           </h3>
-          <a href="{{pathFor 'dream'}}">
+          <a href="{{pathFor 'dream'}}" class="{{#if image}}with-image{{/if}}">
             {{#if image}}
-              <div class="img">
+              <div class="image">
                 <img src="{{image.url store='thumbnails-large'}}" alt="Image for {{title}}">
               </div>
             {{/if}}
             <div class="text">
               <h2>{{title}}</h2>
-              <p>{{preview body length=200}}</p>
+              <p>{{preview body length=300}}</p>
             </div>
           </a>
           <div class="actions">
