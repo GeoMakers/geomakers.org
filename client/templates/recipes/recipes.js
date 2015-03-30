@@ -6,6 +6,12 @@ Template.recipe.helpers({
   }
 });
 
+Template.recipes.helpers({
+  empty: function() {
+    return this.recipes.count() == 0;
+  }
+});
+
 Template.recipesBoard.helpers({
   getQuery: function() {
     var query = {};
