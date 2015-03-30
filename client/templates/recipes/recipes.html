@@ -50,4 +50,11 @@
       </div>
     {{/each}}
   </div>
+  {{#with recipes}}
+    {{#if moreResults}}
+      <div class="text-center">
+        <a class="btn btn-default btn-sm" href="?limit={{nextLimit}}"><i class="fa fa-chevron-circle-down"></i> Load more</a>
+      </div>
+    {{/if}}
+  {{/with}}
 </template>

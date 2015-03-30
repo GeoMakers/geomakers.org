@@ -64,3 +64,11 @@ Template.registerHelper('currentUserIsAuthor', function() {
 Template.registerHelper('imagesOrVideos', function() {
   return this.imageIds || this.videos;
 });
+
+Template.registerHelper('moreResults', function() {
+  return this.limit < this.collection.find().count();
+});
+
+Template.registerHelper('nextLimit', function(cursor) {
+  return this.limit + Config.pageSize;
+});
