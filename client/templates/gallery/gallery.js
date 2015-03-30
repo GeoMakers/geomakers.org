@@ -1,7 +1,7 @@
 var embeds = new ReactiveDict();
 
 function slideCount(data) {
-  return (data.images ? data.images.count() : 0) + (data.videos ? data.videos.length : 0);
+  return (data.imageIds ? data.imageIds.length : 0) + (data.videos ? data.videos.length : 0);
 };
 
 Template.gallery.helpers({
