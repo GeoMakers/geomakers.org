@@ -66,7 +66,7 @@ Template.registerHelper('imagesOrVideos', function() {
 });
 
 Template.registerHelper('moreResults', function() {
-  return this.limit < this.collection.find().count();
+  return this.limit < this.collection.find(this.matcher._selector).count();
 });
 
 Template.registerHelper('nextLimit', function(cursor) {
