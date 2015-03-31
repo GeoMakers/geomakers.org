@@ -58,6 +58,11 @@ aside {
   }
 }
 
+// Semi-disable dropzone in summernote (it will still actually work, which is ok, but the user won't think to use it), see https://github.com/summernote/summernote/issues/187#issuecomment-62575623
+.note-editor .note-dropzone {
+  opacity: 0 !important;
+}
+
 // Orion overrides
 #orion-admin .form-control.selectize-control, #orion-admin .form-control.selectize-dropdown {
   height: auto;
