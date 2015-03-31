@@ -14,11 +14,17 @@
             {{/with}}
             <small>{{livestamp createdAt}}</small>
           </h3>
-          <a href="{{pathFor ../itemRoute}}" class="{{#if image}}with-image{{/if}}">
+          <a href="{{pathFor ../itemRoute}}" class="{{#if image}}with-image{{else}}{{#if location}}with-image{{/if}}{{/if}}">
             {{#if image}}
               <div class="image">
                 <img src="{{image.url store='thumbnails-large'}}" alt="Image for {{title}}">
               </div>
+            {{else}}
+              {{#if location}}
+                <div class="image">
+                  <img src="{{staticMapUrl}}" alt="Map">
+                </div>
+              {{/if}}
             {{/if}}
             <div class="text">
               <h2>{{title}}</h2>
