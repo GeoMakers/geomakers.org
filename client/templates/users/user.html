@@ -19,7 +19,7 @@
 <template name="userContent">
   {{#if hasItems}}
     <div class="{{class}}">
-      <h2>Dreams</h2>
+      <h2>{{title}}</h2>
       <ul class="list-unstyled">
         {{#each getItems items}}
           <li><a href="{{pathFor ../itemRoute}}">{{title}}</a></li>
