@@ -36,7 +36,11 @@ Template.activity.rendered = function () {
             'marker-color': '#0ad78c'
           })
         })
-        .bindPopup(Template.currentData().title)
+        .bindPopup(s.sprintf(
+          '<a href="https://www.google.com/maps/dir/Current+Location/%(lat)s,%(lng)s" target="_blank">Get Directions on Google Maps</a><br>' +
+          '<a href="http://www.openstreetmap.org/directions?route=%%3B%(lat)s%%2C%(lng)s#map=12/%(lat)s/%(lng)s" target="_blank">Get Directions on OpenStreetMap</a>',
+          Template.currentData().location)
+        )
         .addTo(map);
       }
       else {
