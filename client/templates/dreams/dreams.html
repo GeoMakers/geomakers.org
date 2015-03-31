@@ -12,5 +12,9 @@
       Share your dream
     </div>
   </a>
+  {{> dreamsFeed}}
+</template>
+
+<template name="dreamsFeed">
   {{> feed items=dreams itemRoute='dream' class='dreams' actionsTemplate='dreamActions'}}
 </template>
