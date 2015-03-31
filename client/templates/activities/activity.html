@@ -50,6 +50,14 @@
         <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
       {{/each}}
     {{/if}}
+    {{#if recipes}}
+      <h2>Related Recipes</h2>
+      <ul class="recipes list-unstyled">
+        {{#each recipes}}
+          <li><a href="{{pathFor 'recipe'}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
     {{#if currentUserIsAuthor}}
       <h2>Actions</h2>
       <ul class="list-unstyled">
