@@ -40,3 +40,14 @@ Template.recipesBoard.onRendered(function() {
     });
   });
 });
+
+Template.recipeActions.helpers({
+  getQuery: function() {
+    return {
+      recipe: this._id
+    };
+  },
+  class: function() {
+    return Router.current().route.getName() === 'recipe' ? 'btn btn-boost' : '';
+  }
+});

@@ -1,10 +1,22 @@
+<template name="activitiesHeader">
+  <div class="container">
+    <h1>{{title}}</h1>
+    {{#with recipe}}
+      <p class="lead">For the GeoMaker Recipe <a href="{{pathFor 'recipe'}}">{{title}}</a></p>
+    {{/with}}
+  </div>
+</template>
+
 <template name="activities">
-  {{#contentFor 'header'}}
-    <div class="container">
-      <h1>{{title}}</h1>
-    </div>
-  {{/contentFor}}
-  <a href="{{pathFor 'newActivity'}}" class="add media">
+  {{> contentFor region='header' template='activitiesHeader'}}
+  {{#if recipe}}
+    {{#if empty}}
+      <div class="alert alert-info">
+        We don't have any activities for this GeoMaker Recipe yet. Go ahead and share yours.
+      </div>
+    {{/if}}
+  {{/if}}
+  <a href="{{pathFor 'newActivity' query=getQuery}}" class="add media">
     <div class="media-left media-middle">
       <i class="fa fa-plus-circle media-object"></i>
     </div>

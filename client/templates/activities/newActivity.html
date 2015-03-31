@@ -1,12 +1,5 @@
 <template name="newActivity">
-  {{#contentFor 'header'}}
-    <div class="container">
-      <h1>{{title}}</h1>
-      {{#with recipe}}
-        <p class="lead">For the GeoMaker Recipe <a href="{{pathFor 'recipe'}}">{{title}}</a></p>
-      {{/with}}
-    </div>
-  {{/contentFor}}
+  {{> contentFor region='header' template='activitiesHeader'}}
   {{#autoForm collection=collection id='newActivityForm' type='insert' class='form-horizontal'}}
     {{> activityForm}}
   {{/autoForm}}

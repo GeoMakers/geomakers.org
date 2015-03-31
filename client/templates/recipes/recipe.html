@@ -63,8 +63,9 @@
         <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
       {{/each}}
     {{/if}}
+    <h2>Actions</h2>
+    {{> recipeActions}}
     {{#if currentUserIsAuthor}}
-      <h2>Actions</h2>
       <ul class="list-unstyled">
         <li><a href="{{pathFor 'editRecipe'}}"><i class="fa fa-pencil fa-fw"></i>Edit</a></li>
       </ul>
@@ -84,5 +85,17 @@
       {{/with}}
       <small>{{formatDateTime createdAt}}</small>
     </p>
+  </div>
+</template>
+
+<template name="recipeActions">
+  <div class="actions">
+    <ul class="list-inline">
+      <li>
+        <a href="{{pathFor 'activities' query=getQuery}}" class="boost {{class}}">
+          <i class="fa fa-fw fa-bullhorn"></i>Boost
+        </a>
+      </li>
+    </ul>
   </div>
 </template>

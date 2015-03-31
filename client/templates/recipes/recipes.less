@@ -37,6 +37,31 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
         margin-top: -5px;
       }
+      .caption {
+        padding-bottom: 0;
+      }
+      .actions-container {
+        margin-top: @line-height-computed * 0.75;
+        padding: 0 @thumbnail-caption-padding;
+        .actions {
+          border-top: 1px solid @gray-lighter;
+          padding-top: @line-height-computed / 2;
+          ul {
+            margin-bottom: @line-height-computed / 2 - @thumbnail-padding;
+          }
+          .boost {
+            color: @brand-boost;
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              color: darken(@brand-boost, 15%);
+            }
+            i {
+              margin-right: 0.25em;
+            }
+          }
+        }
+      }
     }
     a {
       h2 {
