@@ -63,6 +63,14 @@
         <a href="{{pathFor 'tag' tag=this}}" class="label label-default">{{this}}</a>
       {{/each}}
     {{/if}}
+    {{#if dreams}}
+      <h2>Related Dreams</h2>
+      <ul class="dreams list-unstyled">
+        {{#each dreams}}
+          <li><a href="{{pathFor 'dream'}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
     <h2>Actions</h2>
     {{> recipeActions}}
     {{#if currentUserIsAuthor}}
