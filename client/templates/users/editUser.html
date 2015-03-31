@@ -1,0 +1,25 @@
+<template name="editUser">
+  {{#contentFor 'header'}}
+    <div class="container">
+      <h1>
+        {{> avatar user=this size='large'}}
+        {{profile.name}}
+      </h1>
+    </div>
+  {{/contentFor}}
+  {{> quickForm collection='Meteor.users' doc=this id='editUserForm' type='update'}}
+</template>
+
+<template name="userForm">
+  {{> afQuickField name='title' label='Name your GeoDream' help='Your GeoDream name should be simple and specific' template='bootstrap3-horizontal-geomakers' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  {{> afQuickField name='body' label='Tell us about your GeoDream' template='bootstrap3-horizontal' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  {{> afQuickField name='imageIds' label='Show us your GeoDream' template='bootstrap3-horizontal-geomakers' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  {{> afQuickField name='videos' label='Share your videos' template='bootstrap3-horizontal-geomakers' help='<i class="fa fa-youtube" title="YouTube"></i> <i class="fa fa-vimeo-square" title="Vimeo"></i> <i class="fa fa-vine" title="Vine"></i><span title="etc.">…</span>' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  {{> afQuickField name='links' label='Share your links' template='bootstrap3-horizontal-geomakers' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  {{> afQuickField name='tags' template='bootstrap3-horizontal' label-class='col-sm-3' input-col-class='col-sm-9'}}
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</template>
