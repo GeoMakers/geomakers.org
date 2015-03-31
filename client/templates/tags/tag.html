@@ -8,4 +8,8 @@
     <h2>Recipes</h2>
     {{> recipesBoard recipes=recipes hideNewRecipeLink=true}}
   {{/if}}
+  {{#if activities}}
+    <h2>Activities</h2>
+    {{> activitiesFeed}}
+  {{/if}}
 </template>

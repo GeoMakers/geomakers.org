@@ -24,5 +24,9 @@
       Share an activity
     </div>
   </a>
-  {{> feed items=activities itemRoute='activity'}}
+  {{> activitiesFeed}}
+</template>
+
+<template name="activitiesFeed">
+  {{> feed items=activities itemRoute='activity' class='activities'}}
 </template>
