@@ -45,7 +45,7 @@
     <h2>Files</h2>
     <ul class="fa-ul">
       {{#each files}}
-        <li><a href="{{this.url}}" target="_blank"><i class="fa-li fa fa-{{fileIcon}}"></i>{{this.original.name}}</a></li>
+        <li><a href="{{this.url download=true}}" target="_blank"><i class="fa-li fa fa-{{fileIcon}}"></i>{{this.original.name}}</a></li>
       {{/each}}
     </ul>
   {{/if}}
