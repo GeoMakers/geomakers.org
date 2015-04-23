@@ -1,7 +1,13 @@
 Template.registerHelper('preview', function(value, options) {
   if (!value) return;
   var length = options.hash.length || 140;
+
+  // Strip HTML tags and entities (only &nbsp; for now)
   var content = value.replace(/<(?:.|\n)*?>|&nbsp;/gm, ' ');
+
+  // Unescape HTML encoded characters (such as ampersand)
+  content = _.unescape(content);
+  
   if(content.length > length) content = content.substring(0, length-1).trim() + '…';
   return content;
 });
