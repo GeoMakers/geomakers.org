@@ -28,3 +28,9 @@ Template.aside.rendered = function() {
     });
   });
 }
+
+// Orion overrides
+Template.adminLayout.onRendered(function() {
+  // Inject navbar in admin layou for easier navigation back to frontend
+  Blaze.render(Template.navbar, this.firstNode, this.find('.orion-admin-panel'));
+});
