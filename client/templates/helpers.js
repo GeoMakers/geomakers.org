@@ -2,8 +2,11 @@ Template.registerHelper('preview', function(value, options) {
   if (!value) return;
   var length = options.hash.length || 140;
 
-  // Strip HTML tags and entities (only &nbsp; for now)
-  var content = value.replace(/<(?:.|\n)*?>|&nbsp;/gm, ' ');
+  // Strip HTML tags
+  var content = value.replace(/<(?:.|\n)*?>/gm, '');
+
+  // Convert &nbsp; HTML entity to a clean text space
+  content = content.replace(/&nbsp;/gm, ' ');
 
   // Unescape HTML encoded characters (such as ampersand)
   content = _.unescape(content);
