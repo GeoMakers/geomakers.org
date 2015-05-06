@@ -44,3 +44,8 @@ yogiben:autoform-map
 underscorestring:underscore.string
 meteorhacks:kadira
 reywood:iron-router-ga
+accounts-ui
+service-configuration
+accounts-google
+accounts-facebook
+accounts-twitter
