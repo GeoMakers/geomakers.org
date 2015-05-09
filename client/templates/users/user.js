@@ -1,3 +1,37 @@
+function totalCount(contentTypes) {
+  return contentTypes.map(function(contentType) {
+    return contentType.cursor.count();
+  }).reduce(function(previousValue, currentValue) {
+    return previousValue + currentValue;
+  });
+}
+
+Template.userStats.helpers({
+  contentTypes: function() {
+    return [{
+        cursor: this.dreams,
+        userTitle: 'GeoDreamer'
+      }, {
+        cursor: this.recipes,
+        userTitle: 'GeoMaker'
+      }, {
+        cursor: this.activities,
+        userTitle: 'GeoBooster'
+      }
+    ];
+  },
+  hasContent: function() {
+    return totalCount(this) > 0;
+  },
+  percentageOf: function(contentTypes) {
+    return Math.round(this.cursor.count() / totalCount(contentTypes) * 100);
+  }
+});
+
+Template.userStats.onRendered(function() {
+  this.$('span', this.firstNode).tooltip();
+});
+
 var itemsCount = 0;
 var initialItemsLimit = 5;
 

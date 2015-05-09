@@ -46,8 +46,26 @@
 
 .user {
   .page-header {
-    // FIXME Background should vary with user type (dreamer/maker/booster) – or perhaps combine them in a multi-colored banner?
-    /* background: @brand-dream;
-    color: #fff; */
+    padding-bottom: 0;
+    & > .container {
+      margin-bottom: ((@line-height-computed / 2) - 1); // same as padding-bottom on regular page-header
+    }
+    .user-stats {
+      .text-hide();
+      width: 100%;
+      & > span {
+        display: inline-block;
+        height: @line-height-computed / 2;
+        &.dreams {
+          background: @brand-dream;
+        }
+        &.recipes {
+          background: @brand-make;
+        }
+        &.activities {
+          background: @brand-boost;
+        }
+      }
+    }
   }
 }

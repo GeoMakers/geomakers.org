@@ -6,6 +6,7 @@
         {{profile.name}}
       </h1>
     </div>
+    {{> userStats}}
   {{/contentFor}}
 
   {{{profile.body}}}
@@ -15,6 +16,18 @@
     {{> userContent items=recipes itemRoute='recipe' title='Recipes' class="recipes"}}
     {{> userContent items=activities itemRoute='activity' title='Activities' class="activities"}}
   {{/contentFor}}
+</template>
+
+<template name="userStats">
+  {{#with contentTypes}}
+    {{#if hasContent}}
+      <div class="user-stats">
+        {{#each this}}
+          <span class="{{this.cursor.collection.name}}" style="width: {{percentageOf ..}}%;" title="{{percentageOf ..}}% {{this.userTitle}}"></span>
+        {{/each}}
+      </div>
+    {{/if}}
+  {{/with}}
 </template>
 
 <template name="userContent">
