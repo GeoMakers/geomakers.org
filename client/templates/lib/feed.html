@@ -27,8 +27,9 @@
               {{/if}}
             {{/if}}
             <div class="text">
+              {{> editorsPick}}
               <h2>{{title}}</h2>
-              <p>{{preview body length=300}}</p>
+              <p class="body-preview">{{preview body length=300}}</p>
             </div>
           </a>
           {{> Template.dynamic template=../actionsTemplate}}
