@@ -87,3 +87,8 @@ aside {
     color: @navbar-default-link-color;
   }
 }
+
+// Fix Orion summernote editor modal z-index issue (may have been fixed in later Orion releases, so check if we need it after updating Orion)
+#orion-admin .modal {
+  z-index: @zindex-modal;
+}
