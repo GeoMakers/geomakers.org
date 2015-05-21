@@ -6,8 +6,8 @@
   {{#if imagesOrVideos}}
     {{> gallery}}
   {{/if}}
-  
-  {{{body}}}
+
+  {{sanitizeHtml body}}
 
   {{#if links}}
     <h2>Links</h2>

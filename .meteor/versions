@@ -141,6 +141,7 @@ underscorestring:underscore.string@3.0.3
 url@1.0.4
 useraccounts:bootstrap@1.8.1
 useraccounts:core@1.8.1
+vazco:universe-html-purifier@1.2.0
 webapp@1.2.0
 webapp-hashing@1.0.3
 wizonesolutions:underscore-string@1.0.0

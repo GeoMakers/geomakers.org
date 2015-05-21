@@ -9,7 +9,7 @@
     {{> userStats}}
   {{/contentFor}}
 
-  {{{profile.body}}}
+  {{sanitizeHtml profile.body}}
 
   {{#contentFor 'aside'}}
     {{> userContent items=dreams itemRoute='dream' title='Dreams' class='dreams'}}
