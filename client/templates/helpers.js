@@ -21,6 +21,10 @@ Template.registerHelper('linkify', function(value){
   return value.replace(urlRegExp, '<a href="$&" target="_blank">$&</a>');
 });
 
+Template.registerHelper('sanitizeHtml', function(value){
+  return Spacebars.SafeString(UniHTML.purify(value, {customTags: {div: true}}));
+});
+
 Template.registerHelper('formatDateTime', function(dateTime) {
   return moment(dateTime).format('lll');
 });
