@@ -22,7 +22,7 @@ Template.registerHelper('linkify', function(value){
 });
 
 Template.registerHelper('sanitizeHtml', function(value){
-  return Spacebars.SafeString(UniHTML.purify(value));
+  return Spacebars.SafeString(UniHTML.purify(value, {customTags: {div: true}}));
 });
 
 Template.registerHelper('formatDateTime', function(dateTime) {
