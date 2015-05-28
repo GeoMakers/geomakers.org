@@ -33,7 +33,7 @@
         </a>
       </div>
     {{/unless}}
-    {{#each recipes}}
+    {{#each mergePicks recipes pickedRecipes}}
       <div class="recipe">
         <div class="thumbnail">
           <a href="{{pathFor 'recipe'}}">
@@ -41,6 +41,7 @@
               <img src="{{image.url store='thumbnails-large'}}" alt="Image for {{title}}">
             {{/if}}
             <div class="caption">
+              {{> editorsPick}}
               <h2>{{title}}</h2>
               <p class="author">{{> avatar user=author size='extra-small'}} {{author.profile.name}}</p>
               <p>{{preview body}}</p>
