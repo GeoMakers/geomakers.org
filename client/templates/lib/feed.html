@@ -1,6 +1,6 @@
 <template name="feed">
   <ul class="media-list feed {{class}}">
-    {{#each items}}
+    {{#each mergePicks items pickedItems}}
       <li class="media">
         <div class="media-left">
           {{#with author}}

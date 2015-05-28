@@ -78,6 +78,32 @@ Template.registerHelper('imagesOrVideos', function() {
   return this.imageIds || this.videos;
 });
 
+Template.registerHelper('mergePicks', function(items, pickedItems){
+  var mergedItems = items.fetch();
+  var pickedItemsCount = pickedItems ? pickedItems.count() : 0;
+  if (pickedItemsCount > 0) {
+
+    // Index where the first picked item will be inserted
+    var itemInsertionIndex = 1;
+
+    // Iterate over picked items
+    pickedItems.forEach(function(pickedItem) {
+
+      // Remove picked item from its original place in the complete list
+      mergedItems = _.reject(mergedItems, function(item) {
+        return item._id === pickedItem._id;
+      });
+
+      // Insert picked item at insertion index
+      mergedItems.splice(itemInsertionIndex, 0, pickedItem);
+
+      // Make sure that all picked items are evenly spaced within the first page, offset by the original insertion index
+      itemInsertionIndex += (Config.pageSize + pickedItemsCount) / pickedItemsCount;
+    });
+  }
+  return mergedItems;
+});
+
 Template.registerHelper('moreResults', function() {
   return this.limit < this.collection.find(this.matcher._selector).count();
 });

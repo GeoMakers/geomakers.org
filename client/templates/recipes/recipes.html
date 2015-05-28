@@ -33,7 +33,7 @@
         </a>
       </div>
     {{/unless}}
-    {{#each recipes}}
+    {{#each mergePicks recipes pickedRecipes}}
       <div class="recipe">
         <div class="thumbnail">
           <a href="{{pathFor 'recipe'}}">
